@@ -1,0 +1,15 @@
+# Copyright 2019-2020 Hewlett Packard Enterprise Development LP
+
+FROM cray/sls-base
+
+ENV POSTGRES_HOST=postgres
+ENV DBOPTS=sslmode=disable
+ENV DBUSER=slsuser
+ENV DBPASS=slsuser
+
+# Run test coverage...
+RUN set -ex \
+    && go test -cover -v stash.us.cray.com/HMS/hms-sls/cmd/sls \
+    && go test -cover -v stash.us.cray.com/HMS/hms-sls/cmd/sls-config-generator  \
+    && go test -cover -v stash.us.cray.com/HMS/hms-sls/internal/database \
+    && go test -cover -v stash.us.cray.com/HMS/hms-sls/internal/datastore

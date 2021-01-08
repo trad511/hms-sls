@@ -1,0 +1,3204 @@
+{
+    "Hardware": {
+        "x1000": {
+            "Children": [
+                "x1000c0",
+                "x1000c1",
+                "x1000c2",
+                "x1000c3",
+                "x1000c4",
+                "x1000c5",
+                "x1000c6",
+                "x1000c7"
+            ],
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "Networks": [
+                    {
+                        "CIDR": "10.100.106.10/24",
+                        "Type": "HMN",
+                        "HardwareType": "CN"
+                    },
+                    {
+                        "CIDR": "10.100.106.10/24",
+                        "Type": "HMN",
+                        "HardwareType": "CN"
+                    }
+                ]
+            },
+            "Parent": "s0",
+            "Type": "comptype_cabinet",
+            "XName": "x1000"
+        },
+        "x3000": {
+            "Class": "River",
+            "ExtraProperties": {
+                "Networks": [
+                    {
+                        "CIDR": "10.254.4.0/22",
+                        "Type": "HMN",
+                        "HardwareType": "CN"
+                    },
+                    {
+                        "CIDR": "10.252.4.0/22",
+                        "Type": "NMN",
+                        "HardwareType": "CN"
+                    },
+                    {
+                        "CIDR": "10.254.0.0/22",
+                        "Type": "HMN",
+                        "HardwareType": "NCN"
+                    },
+                    {
+                        "CIDR": "10.252.0.0/22",
+                        "Type": "NMN",
+                        "HardwareType": "NCN"
+                    }
+                ]
+            },
+            "Parent": "s0",
+            "Type": "comptype_cabinet",
+            "XName": "x3000"
+        },
+        "x1000c0s0b0n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1001,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c0s0b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c0s0b0n0"
+        },
+        "x1000c0s0b0n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1002,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c0s0b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c0s0b0n1"
+        },
+        "x1000c0s0b1n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1003,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c0s0b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c0s0b1n0"
+        },
+        "x1000c0s0b1n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1004,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c0s0b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c0s0b1n1"
+        },
+        "x1000c0s1b0n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1005,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c0s1b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c0s1b0n0"
+        },
+        "x1000c0s1b0n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1006,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c0s1b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c0s1b0n1"
+        },
+        "x1000c0s1b1n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1007,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c0s1b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c0s1b1n0"
+        },
+        "x1000c0s1b1n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1008,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c0s1b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c0s1b1n1"
+        },
+        "x1000c0s2b0n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1009,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c0s2b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c0s2b0n0"
+        },
+        "x1000c0s2b0n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1010,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c0s2b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c0s2b0n1"
+        },
+        "x1000c0s2b1n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1011,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c0s2b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c0s2b1n0"
+        },
+        "x1000c0s2b1n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1012,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c0s2b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c0s2b1n1"
+        },
+        "x1000c0s3b0n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1013,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c0s3b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c0s3b0n0"
+        },
+        "x1000c0s3b0n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1014,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c0s3b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c0s3b0n1"
+        },
+        "x1000c0s3b1n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1015,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c0s3b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c0s3b1n0"
+        },
+        "x1000c0s3b1n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1016,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c0s3b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c0s3b1n1"
+        },
+        "x1000c0s4b0n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1017,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c0s4b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c0s4b0n0"
+        },
+        "x1000c0s4b0n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1018,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c0s4b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c0s4b0n1"
+        },
+        "x1000c0s4b1n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1019,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c0s4b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c0s4b1n0"
+        },
+        "x1000c0s4b1n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1020,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c0s4b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c0s4b1n1"
+        },
+        "x1000c0s5b0n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1021,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c0s5b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c0s5b0n0"
+        },
+        "x1000c0s5b0n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1022,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c0s5b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c0s5b0n1"
+        },
+        "x1000c0s5b1n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1023,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c0s5b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c0s5b1n0"
+        },
+        "x1000c0s5b1n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1024,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c0s5b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c0s5b1n1"
+        },
+        "x1000c0s6b0n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1025,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c0s6b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c0s6b0n0"
+        },
+        "x1000c0s6b0n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1026,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c0s6b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c0s6b0n1"
+        },
+        "x1000c0s6b1n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1027,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c0s6b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c0s6b1n0"
+        },
+        "x1000c0s6b1n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1028,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c0s6b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c0s6b1n1"
+        },
+        "x1000c0s7b0n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1029,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c0s7b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c0s7b0n0"
+        },
+        "x1000c0s7b0n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1030,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c0s7b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c0s7b0n1"
+        },
+        "x1000c0s7b1n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1031,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c0s7b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c0s7b1n0"
+        },
+        "x1000c0s7b1n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1032,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c0s7b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c0s7b1n1"
+        },
+        "x1000c1s0b0n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1033,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c1s0b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c1s0b0n0"
+        },
+        "x1000c1s0b0n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1034,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c1s0b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c1s0b0n1"
+        },
+        "x1000c1s0b1n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1035,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c1s0b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c1s0b1n0"
+        },
+        "x1000c1s0b1n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1036,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c1s0b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c1s0b1n1"
+        },
+        "x1000c1s1b0n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1037,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c1s1b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c1s1b0n0"
+        },
+        "x1000c1s1b0n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1038,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c1s1b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c1s1b0n1"
+        },
+        "x1000c1s1b1n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1039,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c1s1b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c1s1b1n0"
+        },
+        "x1000c1s1b1n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1040,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c1s1b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c1s1b1n1"
+        },
+        "x1000c1s2b0n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1041,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c1s2b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c1s2b0n0"
+        },
+        "x1000c1s2b0n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1042,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c1s2b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c1s2b0n1"
+        },
+        "x1000c1s2b1n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1043,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c1s2b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c1s2b1n0"
+        },
+        "x1000c1s2b1n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1044,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c1s2b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c1s2b1n1"
+        },
+        "x1000c1s3b0n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1045,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c1s3b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c1s3b0n0"
+        },
+        "x1000c1s3b0n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1046,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c1s3b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c1s3b0n1"
+        },
+        "x1000c1s3b1n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1047,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c1s3b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c1s3b1n0"
+        },
+        "x1000c1s3b1n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1048,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c1s3b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c1s3b1n1"
+        },
+        "x1000c1s4b0n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1049,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c1s4b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c1s4b0n0"
+        },
+        "x1000c1s4b0n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1050,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c1s4b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c1s4b0n1"
+        },
+        "x1000c1s4b1n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1051,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c1s4b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c1s4b1n0"
+        },
+        "x1000c1s4b1n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1052,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c1s4b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c1s4b1n1"
+        },
+        "x1000c1s5b0n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1053,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c1s5b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c1s5b0n0"
+        },
+        "x1000c1s5b0n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1054,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c1s5b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c1s5b0n1"
+        },
+        "x1000c1s5b1n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1055,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c1s5b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c1s5b1n0"
+        },
+        "x1000c1s5b1n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1056,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c1s5b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c1s5b1n1"
+        },
+        "x1000c1s6b0n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1057,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c1s6b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c1s6b0n0"
+        },
+        "x1000c1s6b0n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1058,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c1s6b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c1s6b0n1"
+        },
+        "x1000c1s6b1n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1059,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c1s6b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c1s6b1n0"
+        },
+        "x1000c1s6b1n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1060,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c1s6b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c1s6b1n1"
+        },
+        "x1000c1s7b0n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1061,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c1s7b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c1s7b0n0"
+        },
+        "x1000c1s7b0n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1062,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c1s7b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c1s7b0n1"
+        },
+        "x1000c1s7b1n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1063,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c1s7b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c1s7b1n0"
+        },
+        "x1000c1s7b1n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1064,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c1s7b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c1s7b1n1"
+        },
+        "x1000c2s0b0n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1065,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c2s0b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c2s0b0n0"
+        },
+        "x1000c2s0b0n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1066,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c2s0b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c2s0b0n1"
+        },
+        "x1000c2s0b1n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1067,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c2s0b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c2s0b1n0"
+        },
+        "x1000c2s0b1n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1068,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c2s0b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c2s0b1n1"
+        },
+        "x1000c2s1b0n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1069,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c2s1b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c2s1b0n0"
+        },
+        "x1000c2s1b0n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1070,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c2s1b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c2s1b0n1"
+        },
+        "x1000c2s1b1n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1071,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c2s1b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c2s1b1n0"
+        },
+        "x1000c2s1b1n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1072,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c2s1b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c2s1b1n1"
+        },
+        "x1000c2s2b0n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1073,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c2s2b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c2s2b0n0"
+        },
+        "x1000c2s2b0n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1074,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c2s2b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c2s2b0n1"
+        },
+        "x1000c2s2b1n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1075,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c2s2b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c2s2b1n0"
+        },
+        "x1000c2s2b1n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1076,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c2s2b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c2s2b1n1"
+        },
+        "x1000c2s3b0n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1077,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c2s3b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c2s3b0n0"
+        },
+        "x1000c2s3b0n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1078,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c2s3b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c2s3b0n1"
+        },
+        "x1000c2s3b1n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1079,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c2s3b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c2s3b1n0"
+        },
+        "x1000c2s3b1n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1080,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c2s3b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c2s3b1n1"
+        },
+        "x1000c2s4b0n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1081,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c2s4b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c2s4b0n0"
+        },
+        "x1000c2s4b0n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1082,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c2s4b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c2s4b0n1"
+        },
+        "x1000c2s4b1n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1083,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c2s4b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c2s4b1n0"
+        },
+        "x1000c2s4b1n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1084,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c2s4b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c2s4b1n1"
+        },
+        "x1000c2s5b0n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1085,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c2s5b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c2s5b0n0"
+        },
+        "x1000c2s5b0n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1086,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c2s5b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c2s5b0n1"
+        },
+        "x1000c2s5b1n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1087,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c2s5b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c2s5b1n0"
+        },
+        "x1000c2s5b1n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1088,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c2s5b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c2s5b1n1"
+        },
+        "x1000c2s6b0n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1089,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c2s6b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c2s6b0n0"
+        },
+        "x1000c2s6b0n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1090,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c2s6b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c2s6b0n1"
+        },
+        "x1000c2s6b1n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1091,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c2s6b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c2s6b1n0"
+        },
+        "x1000c2s6b1n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1092,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c2s6b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c2s6b1n1"
+        },
+        "x1000c2s7b0n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1093,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c2s7b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c2s7b0n0"
+        },
+        "x1000c2s7b0n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1094,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c2s7b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c2s7b0n1"
+        },
+        "x1000c2s7b1n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1095,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c2s7b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c2s7b1n0"
+        },
+        "x1000c2s7b1n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1096,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c2s7b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c2s7b1n1"
+        },
+        "x1000c3s0b0n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1097,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c3s0b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c3s0b0n0"
+        },
+        "x1000c3s0b0n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1098,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c3s0b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c3s0b0n1"
+        },
+        "x1000c3s0b1n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1099,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c3s0b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c3s0b1n0"
+        },
+        "x1000c3s0b1n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1100,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c3s0b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c3s0b1n1"
+        },
+        "x1000c3s1b0n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1101,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c3s1b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c3s1b0n0"
+        },
+        "x1000c3s1b0n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1102,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c3s1b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c3s1b0n1"
+        },
+        "x1000c3s1b1n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1103,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c3s1b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c3s1b1n0"
+        },
+        "x1000c3s1b1n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1104,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c3s1b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c3s1b1n1"
+        },
+        "x1000c3s2b0n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1105,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c3s2b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c3s2b0n0"
+        },
+        "x1000c3s2b0n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1106,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c3s2b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c3s2b0n1"
+        },
+        "x1000c3s2b1n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1107,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c3s2b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c3s2b1n0"
+        },
+        "x1000c3s2b1n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1108,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c3s2b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c3s2b1n1"
+        },
+        "x1000c3s3b0n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1109,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c3s3b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c3s3b0n0"
+        },
+        "x1000c3s3b0n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1110,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c3s3b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c3s3b0n1"
+        },
+        "x1000c3s3b1n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1111,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c3s3b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c3s3b1n0"
+        },
+        "x1000c3s3b1n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1112,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c3s3b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c3s3b1n1"
+        },
+        "x1000c3s4b0n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1113,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c3s4b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c3s4b0n0"
+        },
+        "x1000c3s4b0n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1114,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c3s4b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c3s4b0n1"
+        },
+        "x1000c3s4b1n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1115,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c3s4b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c3s4b1n0"
+        },
+        "x1000c3s4b1n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1116,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c3s4b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c3s4b1n1"
+        },
+        "x1000c3s5b0n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1117,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c3s5b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c3s5b0n0"
+        },
+        "x1000c3s5b0n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1118,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c3s5b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c3s5b0n1"
+        },
+        "x1000c3s5b1n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1119,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c3s5b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c3s5b1n0"
+        },
+        "x1000c3s5b1n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1120,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c3s5b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c3s5b1n1"
+        },
+        "x1000c3s6b0n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1121,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c3s6b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c3s6b0n0"
+        },
+        "x1000c3s6b0n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1122,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c3s6b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c3s6b0n1"
+        },
+        "x1000c3s6b1n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1123,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c3s6b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c3s6b1n0"
+        },
+        "x1000c3s6b1n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1124,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c3s6b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c3s6b1n1"
+        },
+        "x1000c3s7b0n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1125,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c3s7b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c3s7b0n0"
+        },
+        "x1000c3s7b0n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1126,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c3s7b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c3s7b0n1"
+        },
+        "x1000c3s7b1n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1127,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c3s7b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c3s7b1n0"
+        },
+        "x1000c3s7b1n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1128,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c3s7b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c3s7b1n1"
+        },
+        "x1000c4s0b0n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1129,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c4s0b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c4s0b0n0"
+        },
+        "x1000c4s0b0n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1130,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c4s0b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c4s0b0n1"
+        },
+        "x1000c4s0b1n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1131,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c4s0b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c4s0b1n0"
+        },
+        "x1000c4s0b1n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1132,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c4s0b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c4s0b1n1"
+        },
+        "x1000c4s1b0n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1133,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c4s1b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c4s1b0n0"
+        },
+        "x1000c4s1b0n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1134,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c4s1b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c4s1b0n1"
+        },
+        "x1000c4s1b1n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1135,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c4s1b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c4s1b1n0"
+        },
+        "x1000c4s1b1n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1136,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c4s1b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c4s1b1n1"
+        },
+        "x1000c4s2b0n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1137,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c4s2b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c4s2b0n0"
+        },
+        "x1000c4s2b0n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1138,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c4s2b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c4s2b0n1"
+        },
+        "x1000c4s2b1n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1139,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c4s2b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c4s2b1n0"
+        },
+        "x1000c4s2b1n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1140,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c4s2b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c4s2b1n1"
+        },
+        "x1000c4s3b0n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1141,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c4s3b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c4s3b0n0"
+        },
+        "x1000c4s3b0n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1142,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c4s3b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c4s3b0n1"
+        },
+        "x1000c4s3b1n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1143,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c4s3b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c4s3b1n0"
+        },
+        "x1000c4s3b1n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1144,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c4s3b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c4s3b1n1"
+        },
+        "x1000c4s4b0n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1145,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c4s4b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c4s4b0n0"
+        },
+        "x1000c4s4b0n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1146,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c4s4b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c4s4b0n1"
+        },
+        "x1000c4s4b1n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1147,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c4s4b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c4s4b1n0"
+        },
+        "x1000c4s4b1n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1148,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c4s4b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c4s4b1n1"
+        },
+        "x1000c4s5b0n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1149,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c4s5b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c4s5b0n0"
+        },
+        "x1000c4s5b0n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1150,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c4s5b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c4s5b0n1"
+        },
+        "x1000c4s5b1n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1151,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c4s5b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c4s5b1n0"
+        },
+        "x1000c4s5b1n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1152,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c4s5b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c4s5b1n1"
+        },
+        "x1000c4s6b0n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1153,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c4s6b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c4s6b0n0"
+        },
+        "x1000c4s6b0n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1154,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c4s6b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c4s6b0n1"
+        },
+        "x1000c4s6b1n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1155,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c4s6b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c4s6b1n0"
+        },
+        "x1000c4s6b1n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1156,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c4s6b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c4s6b1n1"
+        },
+        "x1000c4s7b0n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1157,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c4s7b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c4s7b0n0"
+        },
+        "x1000c4s7b0n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1158,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c4s7b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c4s7b0n1"
+        },
+        "x1000c4s7b1n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1159,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c4s7b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c4s7b1n0"
+        },
+        "x1000c4s7b1n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1160,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c4s7b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c4s7b1n1"
+        },
+        "x1000c5s0b0n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1161,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c5s0b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c5s0b0n0"
+        },
+        "x1000c5s0b0n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1162,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c5s0b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c5s0b0n1"
+        },
+        "x1000c5s0b1n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1163,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c5s0b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c5s0b1n0"
+        },
+        "x1000c5s0b1n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1164,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c5s0b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c5s0b1n1"
+        },
+        "x1000c5s1b0n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1165,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c5s1b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c5s1b0n0"
+        },
+        "x1000c5s1b0n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1166,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c5s1b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c5s1b0n1"
+        },
+        "x1000c5s1b1n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1167,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c5s1b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c5s1b1n0"
+        },
+        "x1000c5s1b1n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1168,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c5s1b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c5s1b1n1"
+        },
+        "x1000c5s2b0n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1169,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c5s2b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c5s2b0n0"
+        },
+        "x1000c5s2b0n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1170,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c5s2b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c5s2b0n1"
+        },
+        "x1000c5s2b1n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1171,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c5s2b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c5s2b1n0"
+        },
+        "x1000c5s2b1n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1172,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c5s2b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c5s2b1n1"
+        },
+        "x1000c5s3b0n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1173,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c5s3b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c5s3b0n0"
+        },
+        "x1000c5s3b0n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1174,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c5s3b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c5s3b0n1"
+        },
+        "x1000c5s3b1n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1175,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c5s3b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c5s3b1n0"
+        },
+        "x1000c5s3b1n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1176,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c5s3b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c5s3b1n1"
+        },
+        "x1000c5s4b0n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1177,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c5s4b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c5s4b0n0"
+        },
+        "x1000c5s4b0n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1178,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c5s4b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c5s4b0n1"
+        },
+        "x1000c5s4b1n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1179,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c5s4b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c5s4b1n0"
+        },
+        "x1000c5s4b1n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1180,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c5s4b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c5s4b1n1"
+        },
+        "x1000c5s5b0n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1181,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c5s5b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c5s5b0n0"
+        },
+        "x1000c5s5b0n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1182,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c5s5b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c5s5b0n1"
+        },
+        "x1000c5s5b1n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1183,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c5s5b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c5s5b1n0"
+        },
+        "x1000c5s5b1n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1184,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c5s5b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c5s5b1n1"
+        },
+        "x1000c5s6b0n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1185,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c5s6b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c5s6b0n0"
+        },
+        "x1000c5s6b0n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1186,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c5s6b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c5s6b0n1"
+        },
+        "x1000c5s6b1n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1187,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c5s6b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c5s6b1n0"
+        },
+        "x1000c5s6b1n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1188,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c5s6b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c5s6b1n1"
+        },
+        "x1000c5s7b0n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1189,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c5s7b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c5s7b0n0"
+        },
+        "x1000c5s7b0n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1190,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c5s7b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c5s7b0n1"
+        },
+        "x1000c5s7b1n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1191,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c5s7b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c5s7b1n0"
+        },
+        "x1000c5s7b1n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1192,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c5s7b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c5s7b1n1"
+        },
+        "x1000c6s0b0n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1193,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c6s0b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c6s0b0n0"
+        },
+        "x1000c6s0b0n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1194,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c6s0b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c6s0b0n1"
+        },
+        "x1000c6s0b1n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1195,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c6s0b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c6s0b1n0"
+        },
+        "x1000c6s0b1n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1196,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c6s0b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c6s0b1n1"
+        },
+        "x1000c6s1b0n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1197,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c6s1b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c6s1b0n0"
+        },
+        "x1000c6s1b0n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1198,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c6s1b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c6s1b0n1"
+        },
+        "x1000c6s1b1n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1199,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c6s1b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c6s1b1n0"
+        },
+        "x1000c6s1b1n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1200,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c6s1b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c6s1b1n1"
+        },
+        "x1000c6s2b0n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1201,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c6s2b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c6s2b0n0"
+        },
+        "x1000c6s2b0n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1202,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c6s2b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c6s2b0n1"
+        },
+        "x1000c6s2b1n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1203,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c6s2b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c6s2b1n0"
+        },
+        "x1000c6s2b1n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1204,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c6s2b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c6s2b1n1"
+        },
+        "x1000c6s3b0n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1205,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c6s3b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c6s3b0n0"
+        },
+        "x1000c6s3b0n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1206,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c6s3b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c6s3b0n1"
+        },
+        "x1000c6s3b1n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1207,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c6s3b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c6s3b1n0"
+        },
+        "x1000c6s3b1n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1208,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c6s3b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c6s3b1n1"
+        },
+        "x1000c6s4b0n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1209,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c6s4b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c6s4b0n0"
+        },
+        "x1000c6s4b0n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1210,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c6s4b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c6s4b0n1"
+        },
+        "x1000c6s4b1n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1211,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c6s4b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c6s4b1n0"
+        },
+        "x1000c6s4b1n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1212,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c6s4b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c6s4b1n1"
+        },
+        "x1000c6s5b0n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1213,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c6s5b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c6s5b0n0"
+        },
+        "x1000c6s5b0n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1214,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c6s5b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c6s5b0n1"
+        },
+        "x1000c6s5b1n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1215,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c6s5b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c6s5b1n0"
+        },
+        "x1000c6s5b1n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1216,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c6s5b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c6s5b1n1"
+        },
+        "x1000c6s6b0n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1217,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c6s6b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c6s6b0n0"
+        },
+        "x1000c6s6b0n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1218,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c6s6b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c6s6b0n1"
+        },
+        "x1000c6s6b1n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1219,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c6s6b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c6s6b1n0"
+        },
+        "x1000c6s6b1n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1220,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c6s6b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c6s6b1n1"
+        },
+        "x1000c6s7b0n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1221,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c6s7b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c6s7b0n0"
+        },
+        "x1000c6s7b0n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1222,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c6s7b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c6s7b0n1"
+        },
+        "x1000c6s7b1n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1223,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c6s7b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c6s7b1n0"
+        },
+        "x1000c6s7b1n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1224,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c6s7b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c6s7b1n1"
+        },
+        "x1000c7s0b0n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1225,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c7s0b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c7s0b0n0"
+        },
+        "x1000c7s0b0n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1226,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c7s0b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c7s0b0n1"
+        },
+        "x1000c7s0b1n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1227,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c7s0b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c7s0b1n0"
+        },
+        "x1000c7s0b1n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1228,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c7s0b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c7s0b1n1"
+        },
+        "x1000c7s1b0n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1229,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c7s1b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c7s1b0n0"
+        },
+        "x1000c7s1b0n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1230,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c7s1b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c7s1b0n1"
+        },
+        "x1000c7s1b1n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1231,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c7s1b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c7s1b1n0"
+        },
+        "x1000c7s1b1n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1232,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c7s1b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c7s1b1n1"
+        },
+        "x1000c7s2b0n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1233,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c7s2b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c7s2b0n0"
+        },
+        "x1000c7s2b0n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1234,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c7s2b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c7s2b0n1"
+        },
+        "x1000c7s2b1n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1235,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c7s2b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c7s2b1n0"
+        },
+        "x1000c7s2b1n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1236,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c7s2b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c7s2b1n1"
+        },
+        "x1000c7s3b0n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1237,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c7s3b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c7s3b0n0"
+        },
+        "x1000c7s3b0n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1238,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c7s3b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c7s3b0n1"
+        },
+        "x1000c7s3b1n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1239,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c7s3b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c7s3b1n0"
+        },
+        "x1000c7s3b1n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1240,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c7s3b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c7s3b1n1"
+        },
+        "x1000c7s4b0n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1241,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c7s4b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c7s4b0n0"
+        },
+        "x1000c7s4b0n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1242,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c7s4b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c7s4b0n1"
+        },
+        "x1000c7s4b1n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1243,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c7s4b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c7s4b1n0"
+        },
+        "x1000c7s4b1n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1244,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c7s4b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c7s4b1n1"
+        },
+        "x1000c7s5b0n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1245,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c7s5b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c7s5b0n0"
+        },
+        "x1000c7s5b0n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1246,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c7s5b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c7s5b0n1"
+        },
+        "x1000c7s5b1n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1247,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c7s5b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c7s5b1n0"
+        },
+        "x1000c7s5b1n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1248,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c7s5b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c7s5b1n1"
+        },
+        "x1000c7s6b0n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1249,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c7s6b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c7s6b0n0"
+        },
+        "x1000c7s6b0n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1250,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c7s6b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c7s6b0n1"
+        },
+        "x1000c7s6b1n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1251,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c7s6b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c7s6b1n0"
+        },
+        "x1000c7s6b1n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1252,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c7s6b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c7s6b1n1"
+        },
+        "x1000c7s7b0n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1253,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c7s7b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c7s7b0n0"
+        },
+        "x1000c7s7b0n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1254,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c7s7b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c7s7b0n1"
+        },
+        "x1000c7s7b1n0": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1255,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c7s7b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c7s7b1n0"
+        },
+        "x1000c7s7b1n1": {
+            "Class": "Mountain",
+            "ExtraProperties": {
+                "NID": 1256,
+                "Role": "Compute"
+            },
+            "Parent": "x1000c7s7b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x1000c7s7b1n1"
+        },
+        "x3000c0r24b0": {
+            "Children": [],
+            "Class": "River",
+            "ExtraProperties": {
+                "IP4addr": "10.254.2.15",
+                "IP6addr": "",
+                "Password": "vault://hms-creds/x3000c0r24b0",
+                "Username": "vault://hms-creds/x3000c0r24b0"
+            },
+            "Parent": "x3000c0r24",
+            "Type": "comptype_rtr_bmc",
+            "TypeString": "RouterBMC",
+            "Xname": "x3000c0r24b0"
+        },
+        "x3000c0s11b0n0": {
+            "Class": "River",
+            "ExtraProperties": {
+                "NID": 100002,
+                "Role": "Management"
+            },
+            "Parent": "x3000c0s11b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x3000c0s11b0n0"
+        },
+        "x3000c0s13b0n0": {
+            "Class": "River",
+            "ExtraProperties": {
+                "NID": 100003,
+                "Role": "Management"
+            },
+            "Parent": "x3000c0s13b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x3000c0s13b0n0"
+        },
+        "x3000c0s15b0n0": {
+            "Class": "River",
+            "ExtraProperties": {
+                "NID": 100004,
+                "Role": "Management"
+            },
+            "Parent": "x3000c0s15b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x3000c0s15b0n0"
+        },
+        "x3000c0s17b0n0": {
+            "Class": "River",
+            "ExtraProperties": {
+                "NID": 100005,
+                "Role": "Management"
+            },
+            "Parent": "x3000c0s17b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x3000c0s17b0n0"
+        },
+        "x3000c0s19b1n0": {
+            "Class": "River",
+            "ExtraProperties": {
+                "NID": 1,
+                "Role": "Compute"
+            },
+            "Parent": "x3000c0s19b1",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x3000c0s19b1n0"
+        },
+        "x3000c0s19b2n0": {
+            "Class": "River",
+            "ExtraProperties": {
+                "NID": 2,
+                "Role": "Compute"
+            },
+            "Parent": "x3000c0s19b2",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x3000c0s19b2n0"
+        },
+        "x3000c0s19b3n0": {
+            "Class": "River",
+            "ExtraProperties": {
+                "NID": 3,
+                "Role": "Compute"
+            },
+            "Parent": "x3000c0s19b3",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x3000c0s19b3n0"
+        },
+        "x3000c0s19b4n0": {
+            "Class": "River",
+            "ExtraProperties": {
+                "NID": 4,
+                "Role": "Compute"
+            },
+            "Parent": "x3000c0s19b4",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x3000c0s19b4n0"
+        },
+        "x3000c0s1b0n0": {
+            "Class": "River",
+            "ExtraProperties": {
+                "NID": 100006,
+                "Role": "Management"
+            },
+            "Parent": "x3000c0s1b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x3000c0s1b0n0"
+        },
+        "x3000c0s22": {
+            "Children": [
+                "x3000c0s22j33",
+                "x3000c0s22j34",
+                "x3000c0s22j35",
+                "x3000c0s22j36",
+                "x3000c0s22j37"
+            ],
+            "Class": "River",
+            "ExtraProperties": {
+                "IP4addr": "10.254.0.2",
+                "Model": "S3048-ON",
+                "SNMPAuthPassword": "vault://hms-creds/x3000c0s22",
+                "SNMPAuthProtocol": "MD5",
+                "SNMPPrivPassword": "vault://hms-creds/x3000c0s22",
+                "SNMPPrivProtocol": "DES",
+                "SNMPUsername": "testuser"
+            },
+            "Parent": "x3000",
+            "Type": "comptype_mgmt_switch",
+            "TypeString": "MgmtSwitch",
+            "Xname": "x3000c0s22"
+        },
+        "x3000c0s22j33": {
+            "Class": "River",
+            "ExtraProperties": {
+                "NodeNics": [
+                    "x3000c0s19b1"
+                ],
+                "VendorName": "ethernet1/1/33"
+            },
+            "Parent": "x3000c0s22",
+            "Type": "comptype_mgmt_switch_connector",
+            "TypeString": "MgmtSwitchConnector",
+            "Xname": "x3000c0s22j33"
+        },
+        "x3000c0s22j34": {
+            "Class": "River",
+            "ExtraProperties": {
+                "NodeNics": [
+                    "x3000c0s19b2"
+                ],
+                "VendorName": "ethernet1/1/34"
+            },
+            "Parent": "x3000c0s22",
+            "Type": "comptype_mgmt_switch_connector",
+            "TypeString": "MgmtSwitchConnector",
+            "Xname": "x3000c0s22j34"
+        },
+        "x3000c0s22j35": {
+            "Class": "River",
+            "ExtraProperties": {
+                "NodeNics": [
+                    "x3000c0s19b3"
+                ],
+                "VendorName": "ethernet1/1/35"
+            },
+            "Parent": "x3000c0s22",
+            "Type": "comptype_mgmt_switch_connector",
+            "TypeString": "MgmtSwitchConnector",
+            "Xname": "x3000c0s22j35"
+        },
+        "x3000c0s22j36": {
+            "Class": "River",
+            "ExtraProperties": {
+                "NodeNics": [
+                    "x3000c0s19b4"
+                ],
+                "VendorName": "ethernet1/1/36"
+            },
+            "Parent": "x3000c0s22",
+            "Type": "comptype_mgmt_switch_connector",
+            "TypeString": "MgmtSwitchConnector",
+            "Xname": "x3000c0s22j36"
+        },
+        "x3000c0s22j37": {
+            "Class": "River",
+            "ExtraProperties": {
+                "NodeNics": [
+                    "x3000c0s27b0"
+                ],
+                "VendorName": "ethernet1/1/37"
+            },
+            "Parent": "x3000c0s22",
+            "Type": "comptype_mgmt_switch_connector",
+            "TypeString": "MgmtSwitchConnector",
+            "Xname": "x3000c0s22j37"
+        },
+        "x3000c0s27b0n0": {
+            "Class": "River",
+            "ExtraProperties": {
+                "NID": 5000,
+                "Role": "Application"
+            },
+            "Parent": "x3000c0s27b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x3000c0s27b0n0"
+        },
+        "x3000c0s3b0n0": {
+            "Class": "River",
+            "ExtraProperties": {
+                "NID": 100007,
+                "Role": "Management"
+            },
+            "Parent": "x3000c0s3b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x3000c0s3b0n0"
+        },
+        "x3000c0s5b0n0": {
+            "Class": "River",
+            "ExtraProperties": {
+                "NID": 100008,
+                "Role": "Management"
+            },
+            "Parent": "x3000c0s5b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x3000c0s5b0n0"
+        },
+        "x3000c0s7b0n0": {
+            "Class": "River",
+            "ExtraProperties": {
+                "NID": 100000,
+                "Role": "Management"
+            },
+            "Parent": "x3000c0s7b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x3000c0s7b0n0"
+        },
+        "x3000c0s9b0n0": {
+            "Class": "River",
+            "ExtraProperties": {
+                "NID": 100001,
+                "Role": "Management"
+            },
+            "Parent": "x3000c0s9b0",
+            "Type": "comptype_node",
+            "TypeString": "Node",
+            "Xname": "x3000c0s9b0n0"
+        }
+    },
+    "Networks": {
+        "NMN": {
+            "Name": "NMN",
+            "FullName": "Node Management Network",
+            "IPRanges": [
+                "10.252.0.0/17"
+            ],
+            "Type": "ethernet",
+            "ExtraProperties": {
+                "ncn_vlan": 1,
+                "dhcp": {
+                    "file": "ipxe.efi"
+                },
+                "uai_macvlan": {
+                    "CIDR": "10.252.255.0/24"
+                },
+                "metallb": {
+                    "CIDR": "10.92.100.0/24"
+                },
+                "vlan_range": {
+                    "min": 2001,
+                    "max": 2999
+                }
+            }
+        },
+        "HMN": {
+            "Name": "HMN",
+            "FullName": "Hardware Management Network",
+            "IPRanges": [
+                "10.254.0.0/17"
+            ],
+            "Type": "ethernet",
+            "ExtraProperties": {
+                "ncn_vlan": 4,
+                "dhcp": {
+                    "file": "None"
+                },
+                "vlan_range": {
+                    "min": 3001,
+                    "max": 3999
+                }
+            }
+        },
+        "HSN": {
+            "Name": "HSN",
+            "FullName": "High Speed Network",
+            "IPRanges": [
+                "10.253.0.0/16"
+            ],
+            "Type": "slingshot10",
+            "ExtraProperties": {}
+        },
+        "metal_management": {
+            "Name": "Metal Management network",
+            "IPRanges": [
+                "10.1.0.0/16"
+            ],
+            "ExtraProperties": {
+                "ncn_vlan": 1,
+                "dhcp": {
+                    "file": "ipxe.efi"
+                }
+            }
+        }
+    },
+    "file_creation_time": "THIS FILE WAS HAND EDITED",
+    "shcd_revision": "B6",
+    "supernova_version": "THIS FILE WAS HAND EDITED"
+}

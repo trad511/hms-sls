@@ -1,0 +1,13 @@
+.vscode/settings.json
+*.tgz
+*.tar
+.env
+/sls
+kubernetes/cray-hms-sls/helm
+cmd/sls-system-capture/bin
+cmd/sls-system-capture/include
+cmd/sls-system-capture/lib
+cmd/sls-system-capture/pyvenv.cfg
+kubernetes/cray-hms-sls/helm-generated
+~$*.xlsx
+generated*.json
