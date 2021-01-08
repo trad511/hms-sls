@@ -1,0 +1,53 @@
+{
+  "Hardware": {
+    "x0c0s0b0": {
+      "Parent": "x0c0s0",
+      "Xname": "x0c0s0b0",
+      "Type": "comptype_ncard",
+      "Class": "River",
+      "TypeString": "NodeBMC",
+      "ExtraProperties": {
+        "IP4addr": "10.1.1.1",
+        "IP6addr": "DHCPv6"
+      },
+      "VaultData": "lSuvAWeK5Gh6o7DIpWIMfegh85NvyAbqBk41YRIATi9JZQJcgf5H+rna6xGmHMwNu3/z4/ClP8UAkfWuH6xWsvux+XzddjrOdziWD8SNOF4MvxUz5AVHaDqG6E/JoHbGU9kjEHfxD5Hqr2SeqY0j4mXMjXWrvh/TmidXCpnfJ4CFA4IgBjnSR5Tbs/8k0vACo2JTOo9+g7NBK6nnZhOqcQ69UzBAHQkdhlazMqdk82MJv3ygC5Vt5lR9asy5TRHiTucmu49x8AVoiea5OCxS8E/KWcimXvPw07H3RPdf/0gHLNh1ztr6wUuwLOBTs6DYIaTGgab/YckregsKOrnpYkPbpzsZsIa4TULjMpZjLXUohc+J94dFWazTIeD8JGBpMLS39QFM2zZCuKJHI2vS5KYLSjw4iqvr670vEWaAbekxdZkwzJe+7loN/BRY1l059i+ES2OJ92t6yzLJVvXxISlKxORZW7VtZbBQh0aXsApsGW826SY8sNo2M3mjU/oJgY7mO5eom0ckrV+EWK2sIpZ0P9GSO3j+XGAs3M7RyEfF9sIQ9X6JcEhTxBLGrBEyZ8RtIBUVDKphvnfF8pJlvH9s5ZYT9ldxAjy2GP3oOxyklxtiRgNT/xk8oV04LB8SdVB+kS3IGY1vntJ+rlrii3wRz8r4bJ0yT/qFJ7US7PU="
+    },
+    "x1000c3": {
+      "Parent": "x1000",
+      "Children": [
+        "x1000c3s2"
+      ],
+      "Xname": "x1000c3",
+      "Type": "comptype_chassis",
+      "Class": "",
+      "TypeString": "Chassis"
+    },
+    "x1000c3s2": {
+      "Parent": "x1000c3",
+      "Xname": "x1000c3s2",
+      "Type": "comptype_compmod",
+      "Class": "",
+      "TypeString": "ComputeModule"
+    }
+  },
+  "Networks": {
+    "HSN": {
+      "Name": "HSN",
+      "FullName": "High Speed Network",
+      "IPRanges": [
+        "192.168.1.0/28",
+        "192.168.2.0/28"
+      ],
+      "Type": "slingshot10"
+    },
+    "NMN": {
+      "Name": "NMN",
+      "FullName": "Node Management Network",
+      "IPRanges": [
+        "10.100.1.0/28",
+        "10.100.2.0/28"
+      ],
+      "Type": "ethernet"
+    }
+  }
+}

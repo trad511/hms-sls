@@ -1,0 +1,145 @@
+[
+    {
+        "Source": "gn01",
+        "SourceRack": "x3000",
+        "SourceLocation": "u25",
+        "DestinationRack": "x3000",
+        "DestinationLocation": "u38",
+        "DestinationPort": "j46"
+    },
+    {
+        "Source": "Ln01",
+        "SourceRack": "x3000",
+        "SourceLocation": "u23",
+        "DestinationRack": "x3000",
+        "DestinationLocation": "u38",
+        "DestinationPort": "j47"
+    },
+    {
+        "Source": "sn03",
+        "SourceRack": "x3000",
+        "SourceLocation": "u21",
+        "DestinationRack": "x3000",
+        "DestinationLocation": "u38",
+        "DestinationPort": "j48"
+    },
+    {
+        "Source": "sn02",
+        "SourceRack": "x3000",
+        "SourceLocation": "u19",
+        "DestinationRack": "x3000",
+        "DestinationLocation": "u36",
+        "DestinationPort": "j25"
+    },
+    {
+        "Source": "sn01",
+        "SourceRack": "x3000",
+        "SourceLocation": "u17",
+        "DestinationRack": "x3000",
+        "DestinationLocation": "u36",
+        "DestinationPort": "j26"
+    },
+    {
+        "Source": "wn03",
+        "SourceRack": "x3000",
+        "SourceLocation": "u11",
+        "DestinationRack": "x3000",
+        "DestinationLocation": "u38",
+        "DestinationPort": "j33"
+    },
+    {
+        "Source": "wn02",
+        "SourceRack": "x3000",
+        "SourceLocation": "u09",
+        "DestinationRack": "x3000",
+        "DestinationLocation": "u38",
+        "DestinationPort": "j34"
+    },
+    {
+        "Source": "wn01",
+        "SourceRack": "x3000",
+        "SourceLocation": "u07",
+        "DestinationLocation": " ",
+        "DestinationPort": " "
+    },
+    {
+        "Source": "mn03",
+        "SourceRack": "x3000",
+        "SourceLocation": "u05",
+        "DestinationRack": "x3000",
+        "DestinationLocation": "u38",
+        "DestinationPort": "j36"
+    },
+    {
+        "Source": "mn02",
+        "SourceRack": "x3000",
+        "SourceLocation": "u03",
+        "DestinationRack": "x3000",
+        "DestinationLocation": "u38",
+        "DestinationPort": "j37"
+    },
+    {
+        "Source": "mn01",
+        "SourceRack": "x3000",
+        "SourceLocation": "u01",
+        "DestinationRack": "x3000",
+        "DestinationLocation": "u38",
+        "DestinationPort": "j38"
+    },
+    {
+        "Source": "x3000p0",
+        "SourceRack": "x3000",
+        "SourceLocation": " ",
+        "DestinationRack": "x3000",
+        "DestinationLocation": "u38",
+        "DestinationPort": "j41"
+    },
+    {
+        "Source": "sw-hsn04",
+        "SourceRack": "x3000",
+        "SourceLocation": "u39",
+        "DestinationRack": "x3000",
+        "DestinationLocation": "u38",
+        "DestinationPort": "j42"
+    },
+    {
+        "Source": "sw-hsn03",
+        "SourceRack": "x3000",
+        "SourceLocation": "u40",
+        "DestinationRack": "x3000",
+        "DestinationLocation": "u38",
+        "DestinationPort": "j43"
+    },
+    {
+        "Source": "sw-hsn02",
+        "SourceRack": "x3000",
+        "SourceLocation": "u41",
+        "DestinationRack": "x3000",
+        "DestinationLocation": "u38",
+        "DestinationPort": "j44"
+    },
+    {
+        "Source": "sw-hsn01",
+        "SourceRack": "x3000",
+        "SourceLocation": "u42",
+        "DestinationRack": "x3000",
+        "DestinationLocation": "u38",
+        "DestinationPort": "j45"
+    },
+    {
+        "Source": "x3000door-Motiv",
+        "SourceRack": "x3000",
+        "SourceLocation": " ",
+        "DestinationRack": "x3000",
+        "DestinationLocation": "u36",
+        "DestinationPort": "j27"
+    },
+    {
+        "Source": "CAN",
+        "SourceRack": "cfcan",
+        "SourceLocation": " ",
+        "DestinationRack": "x3000",
+        "DestinationLocation": "u38",
+        "DestinationPort": "j49"
+    }
+]

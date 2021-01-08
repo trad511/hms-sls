@@ -1,0 +1,18 @@
+version: '3.1'
+services:
+  postgres:
+    hostname: postgres
+    image: dtr.dev.cray.com/library/postgres:11-alpine
+    environment:
+      - POSTGRES_USER=slsuser
+      - POSTGRES_DB=sls
+      - POSTGRES_HOST_AUTH_METHOD=trust
+  sls-init:
+    build: .
+    command: ["sls-init"]
+    environment:
+      - POSTGRES_HOST=postgres
+      - DBOPTS=sslmode=disable
+      - DBUSER=slsuser
+    depends_on:
+      - postgres

@@ -1,0 +1,172 @@
+cabinet_type:
+  mountain:
+    - x1000
+    - x1001
+    - x1002
+    - x1003
+  mountain_tds: []
+  river:
+    - x3000
+computes:
+  - cabinets:
+      - x1000
+    hmn:
+      cidr: 10.104.0.0/22
+      gateway: 10.104.3.254
+      vlan: 3001
+    nmn:
+      cidr: 10.100.0.0/22
+      gateway: 10.100.3.254
+      vlan: 2001
+  - cabinets:
+      - x1001
+    hmn:
+      cidr: 10.104.4.0/22
+      gateway: 10.104.7.254
+      vlan: 3002
+    nmn:
+      cidr: 10.100.4.0/22
+      gateway: 10.100.7.254
+      vlan: 2002
+  - cabinets:
+      - x1002
+    hmn:
+      cidr: 10.104.8.0/22
+      gateway: 10.104.11.254
+      vlan: 3003
+    nmn:
+      cidr: 10.100.8.0/22
+      gateway: 10.100.11.254
+      vlan: 2003
+  - cabinets:
+      - x1003
+    hmn:
+      cidr: 10.104.12.0/22
+      gateway: 10.104.15.254
+      vlan: 3004
+    nmn:
+      cidr: 10.100.12.0/22
+      gateway: 10.100.15.254
+      vlan: 2004
+ncn:
+  - cabinets:
+      - x3000
+    hmn:
+      cidr: 10.254.0.0/17
+      gateway: 10.254.0.1
+      vlan: 4
+    nmn:
+      cidr: 10.252.0.0/17
+      gateway: 10.252.0.1
+      vlan: 2
+ncn_ips:
+  x3000c0s11b0n0:
+    hmn_ip: 10.254.0.9
+    hostname: ncn-w003
+    nmn_ip: 10.252.0.9
+  x3000c0s7b0n0:
+    hmn_ip: 10.254.0.7
+    hostname: ncn-w001
+    nmn_ip: 10.252.0.7
+  x3000c0s9b0n0:
+    hmn_ip: 10.254.0.8
+    hostname: ncn-w002
+    nmn_ip: 10.252.0.8
+network:
+  hardware_management:
+    full_name: Hardware Management Network
+    name: HMN
+    network_cidr: 10.254.0.0/17
+    type: ethernet
+    vlan: 4
+    vlan_range:
+      max: 3999
+      min: 3001
+  high_speed:
+    full_name: High Speed Network
+    name: HSN
+    network_cidr: 10.253.0.0/16
+    type: slingshot10
+    vlan: 1
+  metal_management:
+    full_name: Metal Management Network
+    name: Metal
+    network_cidr: 10.1.0.0/16
+    type: ethernet
+    vlan: 1
+  metallb_hardware_management:
+    full_name: MetalLB Hardware Management Network
+    ip_reservations:
+      - ip: 10.94.100.225
+        name: dns
+      - ip: 10.94.100.222
+        name: dhcp
+    name: MetalLB_HMN
+    network_cidr: 10.94.100.0/24
+    type: ethernet
+  metallb_node_management:
+    full_name: MetalLB Node Management Network
+    ip_reservations:
+      - ip: 10.92.100.225
+        name: dns
+      - ip: 10.92.100.222
+        name: dhcp
+    name: MetalLB_NMN
+    network_cidr: 10.92.100.0/24
+    type: ethernet
+  node_management:
+    full_name: Node Management Network
+    name: NMN
+    network_cidr: 10.252.0.0/17
+    type: ethernet
+    uai_macvlan:
+      network_cidr: 10.252.124.0/23
+    vlan: 2
+    vlan_range:
+      max: 2999
+      min: 2001
+supernova_metadata:
+  hosts:
+    metadata:
+      file_creation_time: '2020-07-09 16:28:11.835254'
+      shcd_revision: B11
+      supernova_version: 1.3.0013
+switch_ips:
+  d0w1:
+    hmn_ip: 10.254.0.5
+    mtl_ip: 10.1.0.5
+    name: sw-cdu01
+    nmn_ip: 10.252.0.5
+    sun_ip: 10.11.0.5
+  d0w2:
+    hmn_ip: 10.254.0.6
+    mtl_ip: 10.1.0.6
+    name: sw-cdu02
+    nmn_ip: 10.252.0.6
+    sun_ip: 10.11.0.6
+  x3000c0w36:
+    hmn_ip: 10.254.0.4
+    mtl_ip: 10.1.0.4
+    name: sw-leaf02
+    nmn_ip: 10.252.0.4
+    sun_ip: 10.11.0.4
+  x3000c0w37L:
+    hmn_ip: 10.254.0.3
+    mtl_ip: 10.1.0.3
+    name: sw-spine02
+    nmn_ip: 10.252.0.3
+    sun_ip: 10.11.0.3
+  x3000c0w37R:
+    hmn_ip: 10.254.0.1
+    mtl_ip: 10.1.0.1
+    name: sw-spine01
+    nmn_ip: 10.252.0.1
+    sun_ip: 10.11.0.1
+  x3000c0w38:
+    hmn_ip: 10.254.0.2
+    mtl_ip: 10.1.0.2
+    name: sw-leaf01
+    nmn_ip: 10.252.0.2
+    sun_ip: 10.11.0.2
+system:
+  mountain_starting_nid: 1000

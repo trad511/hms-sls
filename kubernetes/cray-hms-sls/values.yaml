@@ -1,0 +1,60 @@
+---
+
+dockerKubectlTag: 0.2.0
+
+schemaVersion: "3"
+schemaStorageClass: ceph-cephfs-external
+schemaAccessMode: ReadWriteMany
+
+loader:
+  forceUpload: false
+  checkS3Marker: true
+  checkSLSContents: false
+  use_s3_dns_hack: true # Should be false on vshasta, true on baremetal
+
+cray-service:
+  type: "Deployment"
+  nameOverride: "cray-sls"
+  fullnameOverride: "cray-sls"
+  serviceAccountName: "jobs-watcher"
+  containers:
+    cray-sls:
+      name: "cray-sls"
+      image:
+        repository: "cray/cray-sls"
+      ports:
+        - name: http
+          containerPort: 8376
+      env:
+        - name: DBUSER
+          valueFrom:
+            secretKeyRef:
+              name: slsuser.cray-sls-postgres.credentials
+              key: username
+        - name: DBPASS
+          valueFrom:
+            secretKeyRef:
+              name: slsuser.cray-sls-postgres.credentials
+              key: password
+      livenessProbe:
+        httpGet:
+          port: 8376
+          path: /v1/liveness
+        initialDelaySeconds: 10
+        periodSeconds: 30
+      readinessProbe:
+        httpGet:
+          port: 8376
+          path: /v1/readiness
+        initialDelaySeconds: 15
+        periodSeconds: 30
+  sqlCluster:
+    enabled: true
+    users:
+      slsuser: []
+    databases:
+      sls: slsuser
+  ingress:
+    enabled: true
+    prefix: "/apis/sls/"
+    uri: "/"
