@@ -5,6 +5,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.5.8] - 2021-01-26
+
+### Changed
+- CASMINST-1126: Pickup the latest cray-service base chart to pick the wait-for-postgres jobs to prevent these jobs from getting OOMKilled
+
 ## [1.5.6] - 2021-01-08
 
 ### Changed
