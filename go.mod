@@ -13,9 +13,9 @@ require (
 	github.com/sirupsen/logrus v1.6.0 // indirect
 	github.com/stretchr/testify v1.5.1
 	go.uber.org/zap v1.15.0
-	stash.us.cray.com/HMS/hms-base v1.8.4
-	stash.us.cray.com/HMS/hms-compcredentials v1.7.0
-	stash.us.cray.com/HMS/hms-s3 v1.4.1
-	stash.us.cray.com/HMS/hms-securestorage v1.8.0
-	stash.us.cray.com/HMS/hms-shcd-parser v1.1.1
+	stash.us.cray.com/HMS/hms-base v1.12.0
+	stash.us.cray.com/HMS/hms-compcredentials v1.10.0
+	stash.us.cray.com/HMS/hms-s3 v1.8.0
+	stash.us.cray.com/HMS/hms-securestorage v1.11.0
+	stash.us.cray.com/HMS/hms-shcd-parser v1.4.0
 )
