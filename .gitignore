@@ -11,3 +11,4 @@ cmd/sls-system-capture/pyvenv.cfg
 kubernetes/cray-hms-sls/helm-generated
 ~$*.xlsx
 generated*.json
+.idea/
