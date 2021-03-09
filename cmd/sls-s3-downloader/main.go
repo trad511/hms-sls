@@ -112,15 +112,21 @@ func main() {
 		logger.Fatal("Failed to setup new S3 client!", zap.Error(err))
 	}
 
-	for true {
+	connected := false
+	for attempt := 0; attempt < 10; attempt++ {
 		err = s3Client.PingBucket()
 		if err != nil {
-			logger.Warn("Failed to ping bucket.", zap.Error(err))
+			logger.Warn("Failed to ping bucket. Sleeping 1 second", zap.Int("attempt", attempt), zap.Error(err))
 			time.Sleep(time.Second)
 		} else {
 			logger.Info("Connected to S3 bucket.", zap.String("bucket", s3Client.ConnInfo.Bucket))
+			connected = true
 			break
 		}
+	}
+	
+	if !connected {
+		logger.Fatal("Exhausted attempts to ping bucket")
 	}
 
 	// Now pull down the one file we need.

@@ -40,16 +40,42 @@ elif [ "$1" = 'sls-loader' ]; then
     # Modify resolve.conf to append the PIT/LiveCD DNS server right after the kube DNS nameserver
     # So if k8s DNS is not aware of rgw-vip, then we will fall back to the PIT/LiveCD nameserver
     # which should be able to resolve the address.
-    echo "${PIT_NAMESERVER}" >> /etc/resolv.conf
+    echo "resolv.conf from NCN:"
+    echo ${PIT_NAMESERVER}
 
-    echo "Modifed resolv.conf:"
-    cat /etc/resolv.conf
+    # Get a list of all of the nameservers avaiable:
+    k8s_nameservers=$(cat /etc/resolv.conf     | grep nameserver | awk '{print $2}')
+    pit_nameservers=$(echo "${PIT_NAMESERVER}" | grep nameserver | awk '{print $2}')
+    all_nameservers=$(printf "%s\n%s\n" "${k8s_nameservers}" "${pit_nameservers}" )
+
+    # Query each nameserver until we can determine an IP address
+    S3_HOSTNAME=$(basename ${S3_ENDPOINT})
+    S3_IP=""
+
+    for attempt in $(seq 10); do
+      # Try each nameserver
+      echo "Lookup attempt: $attempt"
+      for nameserver in $all_nameservers; do
+        echo "Using $nameserver to lookup $S3_HOSTNAME"
+        S3_IP=$(dig +short $S3_ENDPOINT $nameserver)
+        if [ -n "$S3_IP"]; then
+          echo "Lookup succeed: $S3_IP"
+          break 2 # break out of 2 loops
+        fi
+        echo "Lookup failed, trying again"
+      done
+    done
+
+    if [ -z "$S3_IP"]; then
+      echo "All lookup attempts failed, exiting"
+      exit 1
+    fi
 
     # Now use getent to get the IP address of the rgw-vip
     # HACK: We are always assuming that we need to use HTTPS, and there is no port
     # on the given S3_ENDPOINT value. If on vshasta, the DNS hack should be disabled
-    export S3_ENDPOINT="https://$(getent hosts $(basename $S3_ENDPOINT) | awk '{print $1}')"
-    echo "New S3_ENDPOINT: $S3_ENDPOINT"
+    export S3_ENDPOINT="https://${S3_IP}"
+    echo "New S3_ENDPOINT: ${S3_ENDPOINT}"
   fi
 
   # If the loader is called then we have to do some prep work. First, pull the SLS file out of S3.
