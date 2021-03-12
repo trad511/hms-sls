@@ -37,7 +37,7 @@ if [ "$1" = 'sls-init' ]; then
   echo "Migrations copied to persistent location."
 elif [ "$1" = 'sls-loader' ]; then
   if [ "${USE_S3_DNS_HACK}" = 'true' ]; then
-    # Modify resolve.conf to append the PIT/LiveCD DNS server right after the kube DNS nameserver
+    # Build up a list of all of the nameservers for k8s and the PIT/LiveCD nameservers.
     # So if k8s DNS is not aware of rgw-vip, then we will fall back to the PIT/LiveCD nameserver
     # which should be able to resolve the address.
     echo "resolv.conf from NCN:"
@@ -48,14 +48,14 @@ elif [ "$1" = 'sls-loader' ]; then
     pit_nameservers=$(echo "${PIT_NAMESERVER}" | grep nameserver | awk '{print $2}')
     all_nameservers=$(printf "%s\n%s\n" "${k8s_nameservers}" "${pit_nameservers}" )
 
-    # Query each nameserver until we can determine an IP address
     S3_HOSTNAME=$(basename ${S3_ENDPOINT})
     S3_IP=""
 
     if [ -z "${S3_DNS_LOOKUP_ATTEMPTS}" ]; then
-      S3_DNS_LOOKUP_ATTEMPTS=50
+      S3_DNS_LOOKUP_ATTEMPTS=10
     fi
 
+    # Query each nameserver until we can determine an IP address
     for attempt in $(seq ${S3_DNS_LOOKUP_ATTEMPTS}); do
       # Try each nameserver
       echo "Lookup attempt $attempt of ${S3_DNS_LOOKUP_ATTEMPTS}"
@@ -77,7 +77,6 @@ elif [ "$1" = 'sls-loader' ]; then
       exit 1
     fi
 
-    # Now use getent to get the IP address of the rgw-vip
     # HACK: We are always assuming that we need to use HTTPS, and there is no port
     # on the given S3_ENDPOINT value. If on vshasta, the DNS hack should be disabled
     export S3_ENDPOINT="https://${S3_IP}"
