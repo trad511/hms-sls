@@ -142,6 +142,8 @@ spec:
                   key: secret_key
             - name: USE_S3_DNS_HACK
               value: "{{ .Values.loader.use_s3_dns_hack }}"
+            - name: S3_DNS_LOOKUP_ATTEMPTS
+              value: "{{ .Values.loader.s3_dns_lookup_attempts }}"
             - name: PIT_NAMESERVER
               valueFrom:
                 configMapKeyRef:

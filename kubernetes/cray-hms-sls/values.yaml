@@ -11,6 +11,7 @@ loader:
   checkS3Marker: true
   checkSLSContents: false
   use_s3_dns_hack: true # Should be false on vshasta, true on baremetal
+  s3_dns_lookup_attempts: 10
 
 cray-service:
   type: "Deployment"

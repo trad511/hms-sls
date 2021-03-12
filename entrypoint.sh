@@ -52,9 +52,13 @@ elif [ "$1" = 'sls-loader' ]; then
     S3_HOSTNAME=$(basename ${S3_ENDPOINT})
     S3_IP=""
 
-    for attempt in $(seq 10); do
+    if [ -z "${S3_DNS_LOOKUP_ATTEMPTS}" ]; then
+      S3_DNS_LOOKUP_ATTEMPTS=50
+    fi
+
+    for attempt in $(seq ${S3_DNS_LOOKUP_ATTEMPTS}); do
       # Try each nameserver
-      echo "Lookup attempt: $attempt"
+      echo "Lookup attempt $attempt of ${S3_DNS_LOOKUP_ATTEMPTS}"
       for nameserver in $all_nameservers; do
         echo "Using $nameserver to lookup $S3_HOSTNAME"
         S3_IP=$(dig +short $S3_HOSTNAME $nameserver)
