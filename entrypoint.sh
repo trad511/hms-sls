@@ -61,10 +61,10 @@ elif [ "$1" = 'sls-loader' ]; then
       echo "Lookup attempt $attempt of ${S3_DNS_LOOKUP_ATTEMPTS}"
       for nameserver in $all_nameservers; do
         echo "Using $nameserver to lookup $S3_HOSTNAME"
-        S3_IP=$(dig +short $S3_HOSTNAME $nameserver)
+        S3_IP=$(dig +short "@$nameserver" "$S3_HOSTNAME" )
         if [ -n "$S3_IP" ]; then
           echo "Lookup succeeded: $S3_IP"
-          break 2 # break out of 2 loops
+          break 2 # break out of both loops
         fi
         echo "Lookup failed"
       done
