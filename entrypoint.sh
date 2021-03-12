@@ -41,7 +41,7 @@ elif [ "$1" = 'sls-loader' ]; then
     # So if k8s DNS is not aware of rgw-vip, then we will fall back to the PIT/LiveCD nameserver
     # which should be able to resolve the address.
     echo "resolv.conf from NCN:"
-    echo ${PIT_NAMESERVER}
+    echo "${PIT_NAMESERVER}"
 
     # Get a list of all of the nameservers avaiable:
     k8s_nameservers=$(cat /etc/resolv.conf     | grep nameserver | awk '{print $2}')
@@ -57,16 +57,18 @@ elif [ "$1" = 'sls-loader' ]; then
       echo "Lookup attempt: $attempt"
       for nameserver in $all_nameservers; do
         echo "Using $nameserver to lookup $S3_HOSTNAME"
-        S3_IP=$(dig +short $S3_ENDPOINT $nameserver)
-        if [ -n "$S3_IP"]; then
-          echo "Lookup succeed: $S3_IP"
+        S3_IP=$(dig +short $S3_HOSTNAME $nameserver)
+        if [ -n "$S3_IP" ]; then
+          echo "Lookup succeeded: $S3_IP"
           break 2 # break out of 2 loops
         fi
-        echo "Lookup failed, trying again"
+        echo "Lookup failed"
       done
+      echo "Sleeping 1 seconds before next lookup attempt"
+      sleep 1
     done
 
-    if [ -z "$S3_IP"]; then
+    if [ -z "$S3_IP" ]; then
       echo "All lookup attempts failed, exiting"
       exit 1
     fi
