@@ -140,6 +140,8 @@ spec:
                 secretKeyRef:
                   name: sls-s3-credentials
                   key: secret_key
+            - name: MAX_PING_BUCKET_ATTEMPTS
+              value: "{{ .Values.loader.max_ping_bucket_attempts }}"            
             - name: USE_S3_DNS_HACK
               value: "{{ .Values.loader.use_s3_dns_hack }}"
             - name: S3_DNS_LOOKUP_ATTEMPTS
