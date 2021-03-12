@@ -118,7 +118,7 @@ func main() {
 		err = s3Client.PingBucket()
 		if err != nil {
 			logger.Warn("Failed to ping bucket. Sleeping 1 second",
-				zap.Int("attempt", attempt), zap.Init("maxAttempts", *maxPingBucketAttempts) zap.Error(err))
+				zap.Int("attempt", attempt), zap.Int("maxAttempts", *maxPingBucketAttempts), zap.Error(err))
 			time.Sleep(time.Second)
 		} else {
 			logger.Info("Connected to S3 bucket.", zap.String("bucket", s3Client.ConnInfo.Bucket))
