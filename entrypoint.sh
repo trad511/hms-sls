@@ -50,7 +50,7 @@ elif [ "$1" = 'sls-loader' ]; then
     S3_IP=""
 
     if [ -z "${S3_DNS_LOOKUP_ATTEMPTS}" ]; then
-      S3_DNS_LOOKUP_ATTEMPTS=10
+      S3_DNS_LOOKUP_ATTEMPTS=30
     fi
 
     # Query each nameserver until we can determine an IP address

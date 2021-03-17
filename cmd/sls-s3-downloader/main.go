@@ -41,7 +41,7 @@ const SLS_FILE = "sls_input_file.json"
 
 var (
 	outputDir = flag.String("output_dir", "/", "Destination directory to put files.")
-	maxPingBucketAttempts = flag.Int("max_ping_bucket_attempts", 10, "Number of attempts to ping the S3 bucket")
+	maxPingBucketAttempts = flag.Int("max_ping_bucket_attempts", 30, "Number of attempts to ping the S3 bucket")
 
 	logger   *zap.Logger
 	s3Client *hms_s3.S3Client
