@@ -17,6 +17,17 @@ cray-service:
   nameOverride: "cray-sls"
   fullnameOverride: "cray-sls"
   serviceAccountName: "jobs-watcher"
+  replicaCount: 3
+  affinity:
+    podAntiAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+      - topologyKey: kubernetes.io/hostname
+        labelSelector:
+          matchExpressions:
+            - key: app.kubernetes.io/name
+              operator: In
+              values:
+              - cray-sls
   containers:
     cray-sls:
       name: "cray-sls"
