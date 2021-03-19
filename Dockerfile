@@ -66,7 +66,10 @@ ENV SCHEMA_VERSION latest
 
 RUN set -ex \
     && apk update \
-    && apk add --no-cache curl
+    && apk add --no-cache \
+        curl \
+        jq \
+        bind-tools
 
 # Copy files necessary for running/setup
 COPY migrations /migrations

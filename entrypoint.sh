@@ -35,19 +35,54 @@ if [ "$1" = 'sls-init' ]; then
   echo "Migrations copied to persistent location."
 elif [ "$1" = 'sls-loader' ]; then
   if [ "${USE_S3_DNS_HACK}" = 'true' ]; then
-    # Modify resolve.conf to append the PIT/LiveCD DNS server right after the kube DNS nameserver
+    # Build up a list of all of the nameservers for k8s and the PIT/LiveCD nameservers.
     # So if k8s DNS is not aware of rgw-vip, then we will fall back to the PIT/LiveCD nameserver
     # which should be able to resolve the address.
-    echo "${PIT_NAMESERVER}" >> /etc/resolv.conf
+    echo "resolv.conf from NCN:"
+    echo "${PIT_NAMESERVER}"
 
-    echo "Modifed resolv.conf:"
-    cat /etc/resolv.conf
+    # Get a list of all of the nameservers avaiable:
+    k8s_nameservers=$(cat /etc/resolv.conf     | grep nameserver | awk '{print $2}')
+    pit_nameservers=$(echo "${PIT_NAMESERVER}" | grep nameserver | awk '{print $2}')
+    all_nameservers=$(printf "%s\n%s\n" "${k8s_nameservers}" "${pit_nameservers}" )
 
-    # Now use getent to get the IP address of the rgw-vip
+    S3_HOSTNAME=$(basename ${S3_ENDPOINT})
+    S3_IP=""
+
+    if [ -z "${S3_DNS_LOOKUP_ATTEMPTS}" ]; then
+      S3_DNS_LOOKUP_ATTEMPTS=30
+    fi
+
+    # Query each nameserver until we can determine an IP address
+    for attempt in $(seq ${S3_DNS_LOOKUP_ATTEMPTS}); do
+      # Try each nameserver
+      echo "Lookup attempt $attempt of ${S3_DNS_LOOKUP_ATTEMPTS}"
+      for nameserver in $all_nameservers; do
+        echo "Using $nameserver to lookup $S3_HOSTNAME"
+        exit_code=0
+        S3_IP=$(dig +short "@$nameserver" "$S3_HOSTNAME") || exit_code=$?
+        if [ "$exit_code" -ne 0 ]; then
+          echo "Lookup had non-zero status code: $exit_code"
+        elif [ -n "$S3_IP" ]; then
+          echo "Lookup succeeded: $S3_IP"
+          break 2 # break out of both loops
+        fi
+        
+        echo "Lookup failed"
+      done
+      echo "Sleeping 1 seconds before next lookup attempt"
+      sleep 1
+    done
+
+    if [ -z "$S3_IP" ]; then
+      echo "All lookup attempts failed, exiting"
+      exit 1
+    fi
+
     # HACK: We are always assuming that we need to use HTTPS, and there is no port
     # on the given S3_ENDPOINT value. If on vshasta, the DNS hack should be disabled
-    export S3_ENDPOINT="https://$(getent hosts $(basename $S3_ENDPOINT) | awk '{print $1}')"
-    echo "New S3_ENDPOINT: $S3_ENDPOINT"
+    export S3_ENDPOINT="https://${S3_IP}"
+    echo "New S3_ENDPOINT: ${S3_ENDPOINT}"
   fi
 
   # If the loader is called then we have to do some prep work. First, pull the SLS file out of S3.
