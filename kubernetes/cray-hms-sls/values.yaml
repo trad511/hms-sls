@@ -30,6 +30,10 @@ cray-service:
               operator: In
               values:
               - cray-sls
+  strategy:
+    rollingUpdate:
+      maxUnavailable: 50%
+    type: RollingUpdate
   containers:
     cray-sls:
       name: "cray-sls"
