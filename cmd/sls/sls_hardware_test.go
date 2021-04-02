@@ -883,7 +883,6 @@ func dbInit() {
 	setEnvIfEmpty("POSTGRES_USER", "slsuser")
 	setEnvIfEmpty("POSTGRES_PASSWORD", "slsuser")
 	setEnvIfEmpty("POSTGRES_DB", "sls")
-	setEnvIfEmpty("POSTGRES_HOST", "postgres")
 	setEnvIfEmpty("DBOPTS", "sslmode=disable")
 	setEnvIfEmpty("DBUSER", "slsuser")
 	setEnvIfEmpty("DBPASS", "slsuser")

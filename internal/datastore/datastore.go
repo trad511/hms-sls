@@ -25,8 +25,9 @@ package datastore
 import (
 	"fmt"
 	"path"
-	"stash.us.cray.com/HMS/hms-sls/pkg/sls-common"
 	"strings"
+
+	sls_common "stash.us.cray.com/HMS/hms-sls/pkg/sls-common"
 
 	base "stash.us.cray.com/HMS/hms-base"
 	"stash.us.cray.com/HMS/hms-sls/internal/database"
@@ -240,7 +241,7 @@ func validateFields(obj sls_common.GenericHardware) error {
 
 	/* Finally, default to "no good" */
 	default:
-		err := fmt.Errorf("cannot determine type of obbject with type field %s", obj.GetType())
+		err := fmt.Errorf("cannot determine type of object with type field %s", obj.GetType())
 		return err
 	}
 
