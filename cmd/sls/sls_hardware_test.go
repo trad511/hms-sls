@@ -33,6 +33,8 @@ import (
 	"testing"
 
 	"github.com/gorilla/mux"
+	"github.com/stretchr/testify/suite"
+	base "stash.us.cray.com/HMS/hms-base"
 	"stash.us.cray.com/HMS/hms-sls/internal/database"
 	sls_common "stash.us.cray.com/HMS/hms-sls/pkg/sls-common"
 )
@@ -797,7 +799,7 @@ func hwDBClear() {
 		if gw.Code != http.StatusOK {
 			fmt.Printf("ERROR deleting '%s', status %d/%s\n", hw.Xname,
 				gw.Code, http.StatusText(gw.Code))
-			return
+			continue
 		}
 	}
 }
@@ -1308,4 +1310,195 @@ func Test_doHardwareGetAll(t *testing.T) {
 			t.Error("ERROR, miscompare of /hardware GET data:", cmperr)
 		}
 	}
+}
+
+type HardwareTestSuite struct {
+	suite.Suite
+}
+
+func (suite *HardwareTestSuite) SetupSuite() {
+	if router == nil {
+		routes = generateRoutes()
+		router = newRouter(routes)
+	}
+
+	dbInit()
+	hwDBClear()
+}
+
+func (suite *HardwareTestSuite) TestVerifyPOSTAllTypes() {
+	// Verify the hardware search endpoint accepts the following SLS types via the type query param
+	tests := []string{
+		// TODO Due to CASMHMS-XXXX the following can only only be posted into SLS whith an empty parent:
+		// "d0", // "comptype_cdu",                       // dD
+		// "x1", // "comptype_cabinet",                   // xX
+
+		// TODO due to CASMHMS-XXXX the follow can't be posted in due to invalid parent field
+		// "x1c1r1t1f1", // "comptype_rtr_tor_fpga",            // xXcCrRtTfF
+		// "x1c1h1s1",   // "comptype_hl_switch",              // xXcChHsS
+
+		"d0w1",     // "comptype_cdu_mgmt_switch",           // dDwW
+		"x1d1",     // "comptype_cab_cdu",                   // xXdD
+		"x1m1",     // "comptype_cab_pdu_controller",        // xXmM
+		"x1m1p0",   // "comptype_cab_pdu",                   // xXmMpP
+		"x1m1i1",   // "comptype_cab_pdu_nic",               // xXmMiI
+		"x1m1p0j1", // "comptype_cab_pdu_outlet",            // xXmMpPjJ DEPRECATED
+		"x1m1p0v1", // "comptype_cab_pdu_pwr_connector",     // xXmMpPvV
+
+		"x1c1",         // "comptype_chassis",                 // xXcC
+		"x1c1b0",       // "comptype_chassis_bmc",             // xXcCbB
+		"x1c1t0",       // "comptype_cmm_rectifier",           // xXcCtT
+		"x1c1f0",       // "comptype_cmm_fpga",                // xXcCfF
+		"x1e1",         // "comptype_cec",                     // xXeE
+		"x1c1s1",       // "comptype_compmod",                 // xXcCsS
+		"x1c1r1",       // "comptype_rtrmod",                  // xXcCrR
+		"x1c1s1b1",     // "comptype_ncard",                   // xXcCsSbB
+		"x1c1s1b1i1",   // "comptype_bmc_nic",                 // xXcCsSbBiI
+		"x1c1s1e1",     // "comptype_node_enclosure",          // xXcCsSeE
+		"x1c1s1v1",     // "comptype_compmod_power_connector", // xXcCsSvV
+		"x1c1s1b1n1",   // "comptype_node",                    // xXcCsSbBnN
+		"x1c1s1b1n1p1", // "comptype_node_processor",          // xXcCsSbBnNpP
+		"x1c1s1b1n1i1", // "comptype_node_nic",                // xXcCsSbBnNiI
+		"x1c1s1b1n1h1", // "comptype_node_hsn_nic",            // xXcCsSbBnNhH
+		"x1c1s1b1n1d1", // "comptype_dimm",                    // xXcCsSbBnNdD
+		"x1c1s1b1n1a1", // "comptype_node_accel",              // xXcCsSbBnNaA
+		"x1c1s1b1f0",   // "comptype_node_fpga",               // xXcCsSbBfF
+		"x1c1r1a1",     // "comptype_hsn_asic",                // xXcCrRaA
+		"x1c1r1f1",     // "comptype_rtr_fpga",                // xXcCrRfF
+		"x1c1r1b1",     // "comptype_rtr_bmc",                 // xXcCrRbB
+		"x1c1r1b1i1",   // "comptype_rtr_bmc_nic",             // xXcCrRbBiI
+
+		"x1c1r1e1",   // "comptype_hsn_board",             // xXcCrReE
+		"x1c1r1a1l1", // "comptype_hsn_link",              // xXcCrRaAlL
+		"x1c1r1j1",   // "comptype_hsn_connector",         // xXcCrRjJ
+		"x1c1r1j1p1", // "comptype_hsn_connector_port",    // xXcCrRjJpP
+		"x1c1w1",     // "comptype_mgmt_switch",           // xXcCwW
+		"x1c1w1j1",   // "comptype_mgmt_switch_connector", // xXcCwWjJ
+	}
+
+	for _, xname := range tests {
+		suite.True(base.IsHMSCompIDValid(xname), xname)
+		hmsType := base.GetHMSType(xname)
+		slsType := sls_common.HMSTypeToHMSStringType(hmsType)
+
+		suite.NotEqual("INVALID", slsType)
+
+		h := sls_common.GenericHardware{
+			Parent: base.GetHMSCompParent(xname),
+			Xname:  xname,
+			Class:  sls_common.ClassRiver,
+			// TODO make Type required, and Typestring derivied
+			Type:       slsType, // TODO are these needed? Yes
+			TypeString: hmsType, // TODO are these needed? Yes
+		}
+
+		payload, err := json.Marshal(h)
+		suite.NoError(err)
+
+		suite.T().Log(string(payload))
+
+		req, preqerr := http.NewRequest("POST", hwURLBase, bytes.NewBuffer(payload))
+		suite.NoError(preqerr, "creating http POST request")
+
+		response := httptest.NewRecorder()
+		router.ServeHTTP(response, req)
+
+		//Check response code
+		suite.Equal(http.StatusOK, response.Code, "Response: %s", response.Body.String())
+	}
+}
+
+func (suite *HardwareTestSuite) TestVerifyPUTAllTypes() {
+	// TODO CASMHMS-XXXX PUT will create an object if it does not already exist
+
+	// Verify the hardware search endpoint accepts the following SLS types via the type query param
+	tests := []string{
+		// TODO Due to CASMHMS-4270 the following components can not be used with PUT
+		// "d0",       // "comptype_cdu",                // dD
+		// "x1",       // "comptype_cabinet",            // xX
+
+		// TODO Due to CASMHMS-XXXX the following components do not have a valid parent type defined
+		// "x1c1r1t1f1", //"x1c1r1T1f1",   // "comptype_rtr_tor_fpga",
+
+		// TODO Due to CASMHMS-XXXX the following components do not have a valid parent type defined
+		// "x1c1h1s1", // "comptype_hl_switch",             // xXcChHsS
+
+		"d0w1",     // "comptype_cdu_mgmt_switch",    // dDwW
+		"x1d1",     // "comptype_cab_cdu",            // xXdD
+		"x1m1p0",   // "comptype_cab_pdu",            // xXmMpP
+		"x1m1i1",   // "comptype_cab_pdu_nic",        // xXmMiI
+		"x1m1p0j1", // "comptype_cab_pdu_outlet",     // xXmMpPjJ DEPRECATED
+		"x1m1p0v1", // "comptype_cab_pdu_pwr_connector",     // xXmMpPvV
+
+		"x1c1",         // "comptype_chassis",                 // xXcC
+		"x1c1b0",       // "comptype_chassis_bmc",             // xXcCbB
+		"x1c1t0",       // "comptype_cmm_rectifier",           // xXcCtT
+		"x1c1f0",       // "comptype_cmm_fpga",                // xXcCfF
+		"x1e1",         // "comptype_cec",                     // xXeE
+		"x1c1s1",       // "comptype_compmod",                 // xXcCsS
+		"x1c1r1",       // "comptype_rtrmod",                  // xXcCrR
+		"x1c1s1b1",     // "comptype_ncard",                   // xXcCsSbB
+		"x1c1s1b1i1",   // "comptype_bmc_nic",                 // xXcCsSbBiI
+		"x1c1s1e1",     // "comptype_node_enclosure",          // xXcCsSeE
+		"x1c1s1v1",     // "comptype_compmod_power_connector", // xXcCsSvV
+		"x1c1s1b1n1",   // "comptype_node",                    // xXcCsSbBnN
+		"x1c1s1b1n1p1", // "comptype_node_processor",          // xXcCsSbBnNpP
+		"x1c1s1b1n1i1", // "comptype_node_nic",                // xXcCsSbBnNiI
+		"x1c1s1b1n1h1", // "comptype_node_hsn_nic",            // xXcCsSbBnNhH
+		"x1c1s1b1n1d1", // "comptype_dimm",                    // xXcCsSbBnNdD
+		"x1c1s1b1n1a1", // "comptype_node_accel",              // xXcCsSbBnNaA
+		"x1c1s1b1f0",   // "comptype_node_fpga",               // xXcCsSbBfF
+		"x1c1r1a1",     // "comptype_hsn_asic",                // xXcCrRaA
+		"x1c1r1f1",     // "comptype_rtr_fpga",                // xXcCrRfF
+
+		"x1c1r1b1",   // "comptype_rtr_bmc",                 // xXcCrRbB
+		"x1c1r1b1i1", // "comptype_rtr_bmc_nic",             // xXcCrRbBiI
+
+		"x1c1r1e1",   // "comptype_hsn_board",             // xXcCrReE
+		"x1c1r1a1l1", // "comptype_hsn_link",              // xXcCrRaAlL
+		"x1c1r1j1",   // "comptype_hsn_connector",         // xXcCrRjJ
+		"x1c1r1j1p1", // "comptype_hsn_connector_port",    // xXcCrRjJpP
+		"x1c1w1",     // "comptype_mgmt_switch",           // xXcCwW
+		"x1c1w1j1",   // "comptype_mgmt_switch_connector", // xXcCwWjJ
+	}
+
+	for _, xname := range tests {
+		suite.True(base.IsHMSCompIDValid(xname), xname)
+		hmsType := base.GetHMSType(xname)
+		slsType := sls_common.HMSTypeToHMSStringType(hmsType)
+
+		suite.NotEqual("INVALID", slsType)
+
+		h := sls_common.GenericHardware{
+			Parent: base.GetHMSCompParent(xname),
+			Xname:  xname,
+			Class:  sls_common.ClassRiver,
+			// TODO make Type required, and Typestring derivied
+			Type:       slsType, // TODO are these needed? Yes
+			TypeString: hmsType, // TODO are these needed? Yes
+		}
+
+		if h.Parent == "" {
+			h.Parent = "s0"
+		}
+
+		payload, err := json.Marshal(h)
+		suite.NoError(err)
+
+		suite.T().Log(string(payload))
+
+		putURL := hwURLBase + "/" + xname
+		req, preqerr := http.NewRequest("PUT", putURL, bytes.NewBuffer(payload))
+		suite.NoError(preqerr, "creating http POST request")
+
+		response := httptest.NewRecorder()
+		router.ServeHTTP(response, req)
+
+		//Check response code
+		suite.Equal(http.StatusOK, response.Code, "Response: %s", response.Body.String())
+	}
+}
+
+func TestHardwareTestSuite(t *testing.T) {
+	suite.Run(t, new(HardwareTestSuite))
 }

@@ -211,6 +211,8 @@ func validateFields(obj sls_common.GenericHardware) error {
 	case sls_common.ComputeModule:
 	case sls_common.Node:
 	case sls_common.NodeBMC:
+	case sls_common.CabinetPDUPowerConnector:
+	case sls_common.CDUMgmtSwitch:
 
 	/* These all have no specific properties that need validation */
 	/* for these, do nothing */

@@ -76,6 +76,7 @@ func validateType(typeObj sls_common.HMSStringType) error {
 		return UnsupportedType
 
 	/* Items in this section have specific properties that require validation */
+	case sls_common.CabinetPDUPowerConnector:
 	case sls_common.NodePowerConnector:
 		//PoweredBy
 	case sls_common.HSNConnector:
