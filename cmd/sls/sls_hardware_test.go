@@ -1329,11 +1329,11 @@ func (suite *HardwareTestSuite) SetupSuite() {
 func (suite *HardwareTestSuite) TestVerifyPOSTAllTypes() {
 	// Verify the hardware search endpoint accepts the following SLS types via the type query param
 	tests := []string{
-		// TODO Due to CASMHMS-XXXX the following can only only be posted into SLS whith an empty parent:
+		// TODO Due to CASMHMS-4270 the following can only only be posted into SLS whith an empty parent:
 		// "d0", // "comptype_cdu",                       // dD
 		// "x1", // "comptype_cabinet",                   // xX
 
-		// TODO due to CASMHMS-XXXX the follow can't be posted in due to invalid parent field
+		// TODO due to CASMHMS-4669 the follow can't be posted in due to invalid parent field
 		// "x1c1r1t1f1", // "comptype_rtr_tor_fpga",            // xXcCrRtTfF
 		// "x1c1h1s1",   // "comptype_hl_switch",              // xXcChHsS
 
@@ -1384,12 +1384,11 @@ func (suite *HardwareTestSuite) TestVerifyPOSTAllTypes() {
 		suite.NotEqual("INVALID", slsType)
 
 		h := sls_common.GenericHardware{
-			Parent: base.GetHMSCompParent(xname),
-			Xname:  xname,
-			Class:  sls_common.ClassRiver,
-			// TODO make Type required, and Typestring derivied
-			Type:       slsType, // TODO are these needed? Yes
-			TypeString: hmsType, // TODO are these needed? Yes
+			Parent:     base.GetHMSCompParent(xname),
+			Xname:      xname,
+			Class:      sls_common.ClassRiver,
+			Type:       slsType,
+			TypeString: hmsType,
 		}
 
 		payload, err := json.Marshal(h)
@@ -1409,7 +1408,9 @@ func (suite *HardwareTestSuite) TestVerifyPOSTAllTypes() {
 }
 
 func (suite *HardwareTestSuite) TestVerifyPUTAllTypes() {
-	// TODO CASMHMS-XXXX PUT will create an object if it does not already exist
+	// TODO CASMHMS-4670 PUT will create an object if it does not already exist
+	// Right now this test expliots that fact, but when CASMHMS-4670 is addressed this test needs to
+	// be updated.
 
 	// Verify the hardware search endpoint accepts the following SLS types via the type query param
 	tests := []string{
@@ -1417,11 +1418,9 @@ func (suite *HardwareTestSuite) TestVerifyPUTAllTypes() {
 		// "d0",       // "comptype_cdu",                // dD
 		// "x1",       // "comptype_cabinet",            // xX
 
-		// TODO Due to CASMHMS-XXXX the following components do not have a valid parent type defined
+		// TODO Due to CASMHMS-4667 the following components do not have a valid parent type defined
 		// "x1c1r1t1f1", //"x1c1r1T1f1",   // "comptype_rtr_tor_fpga",
-
-		// TODO Due to CASMHMS-XXXX the following components do not have a valid parent type defined
-		// "x1c1h1s1", // "comptype_hl_switch",             // xXcChHsS
+		// "x1c1h1s1",   // "comptype_hl_switch",             // xXcChHsS
 
 		"d0w1",     // "comptype_cdu_mgmt_switch",    // dDwW
 		"x1d1",     // "comptype_cab_cdu",            // xXdD
@@ -1470,16 +1469,11 @@ func (suite *HardwareTestSuite) TestVerifyPUTAllTypes() {
 		suite.NotEqual("INVALID", slsType)
 
 		h := sls_common.GenericHardware{
-			Parent: base.GetHMSCompParent(xname),
-			Xname:  xname,
-			Class:  sls_common.ClassRiver,
-			// TODO make Type required, and Typestring derivied
-			Type:       slsType, // TODO are these needed? Yes
-			TypeString: hmsType, // TODO are these needed? Yes
-		}
-
-		if h.Parent == "" {
-			h.Parent = "s0"
+			Parent:     base.GetHMSCompParent(xname),
+			Xname:      xname,
+			Class:      sls_common.ClassRiver,
+			Type:       slsType,
+			TypeString: hmsType,
 		}
 
 		payload, err := json.Marshal(h)

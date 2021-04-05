@@ -231,7 +231,7 @@ func (suite *HardwareSearchTestSuite) TestSearchSpecialTypes() {
 
 		suite.T().Logf("Response: %d", response.Code)
 
-		// TODO FIX This feels like it should be a 400 Bad Request instead
+		// TODO CASMHMS-4671 - This feels like it should be a 400 Bad Request instead
 		suite.Equal(http.StatusInternalServerError, response.Code, "Bad response in GET op")
 	}
 }
@@ -342,7 +342,7 @@ func (suite *HardwareSearchTestSuite) TestSearchXname() {
 	}, {
 		parent:         "foo",
 		xnames:         []string{},
-		expectedStatus: http.StatusInternalServerError, // TODO FIX: This should probably get a 400 status code
+		expectedStatus: http.StatusInternalServerError, // TODO CASMHMS-4671 This should probably get a 400 status code
 	}}
 
 	for _, test := range tests {
