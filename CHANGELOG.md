@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - CASMHMS-4605 - Update the loftsman/docker-kubectl image to use a production version.
+- CASMHMS-4578 - Update the cray-service chart to 2.4.5 to address postgres security vulnerabilities.
 
 ## [1.8.3] - 2021-03-19
 
