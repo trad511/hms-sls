@@ -5,12 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.18.5] - 2021-04-06
+
+### Changed
+- CASMHMS-4600 - Fixed an issue where the Hardware search API did not accept `comptype_hl_switch` and `comptype_cdu_mgmt_switch` as valid values to the `type` query param.
+- CASMHMS-4578 - Update the cray-service chart to 2.4.5 to address postgres security vulnerabilities.
+- Fixed an issue where SLS did not have `comptype_cab_pdu_pwr_connector` properly defined.
+
 ## [1.18.4] - 2021-03-31
 
 ### Changed
 
 - CASMHMS-4605 - Update the loftsman/docker-kubectl image to use a production version.
-- CASMHMS-4578 - Update the cray-service chart to 2.4.5 to address postgres security vulnerabilities.
 
 ## [1.8.3] - 2021-03-19
 
