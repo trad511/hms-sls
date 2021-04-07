@@ -36,7 +36,7 @@
 #
 #     DATE STARTED      : 06/23/2020
 #
-#     LAST MODIFIED     : 09/23/2020
+#     LAST MODIFIED     : 03/30/2021
 #
 #     SYNOPSIS
 #       This is a smoke test for the HMS SLS API that makes basic HTTP
@@ -68,6 +68,7 @@
 #       -------------------------------------------------------
 #       schooler   06/23/2020   initial implementation
 #       schooler   09/23/2020   use latest hms_smoke_test_lib
+#       schooler   03/30/2021   add check_job_status test
 #
 #     DEPENDENCIES
 #       - hms_smoke_test_lib_ncn-resources_remote-resources.sh which is
@@ -79,15 +80,16 @@
 #
 ###############################################################
 
-# HMS test metrics test cases: 8
+# HMS test metrics test cases: 9
 # 1. Check cray-sls pod statuses
-# 2. GET /version API response code
-# 3. GET /health API response code
-# 4. GET /liveness API response code
-# 5. GET /readiness API response code
-# 6. GET /hardware API response code
-# 7. GET /networks API response code
-# 8. GET /dumpstate API response code
+# 2. Check cray-sls job statuses
+# 3. GET /version API response code
+# 4. GET /health API response code
+# 5. GET /liveness API response code
+# 6. GET /readiness API response code
+# 7. GET /hardware API response code
+# 8. GET /networks API response code
+# 9. GET /dumpstate API response code
 
 # initialize test variables
 TEST_RUN_TIMESTAMP=$(date +"%Y%m%dT%H%M%S")
@@ -151,6 +153,13 @@ function check_pod_status()
     return $?
 }
 
+# check_job_status
+function check_job_status()
+{
+    run_check_job_status "cray-sls"
+    return $?
+}
+
 trap ">&2 echo \"recieved kill signal, exiting with status of '1'...\" ; \
     cleanup ; \
     exit 1" SIGHUP SIGINT SIGTERM
@@ -175,6 +184,14 @@ echo "Running sls_smoke_test..."
 
 # run initial pod status test
 check_pod_status
+if [[ $? -ne 0 ]] ; then
+    echo "FAIL: sls_smoke_test ran with failures"
+    cleanup
+    exit 1
+fi
+
+# run initial job status test
+check_job_status
 if [[ $? -ne 0 ]] ; then
     echo "FAIL: sls_smoke_test ran with failures"
     cleanup
