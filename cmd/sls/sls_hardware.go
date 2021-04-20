@@ -27,8 +27,9 @@ import (
 	"io/ioutil"
 	"log"
 	"net/http"
-	"stash.us.cray.com/HMS/hms-sls/pkg/sls-common"
 	"strings"
+
+	sls_common "stash.us.cray.com/HMS/hms-sls/pkg/sls-common"
 
 	base "stash.us.cray.com/HMS/hms-base"
 	"stash.us.cray.com/HMS/hms-sls/internal/database"
@@ -493,7 +494,7 @@ func doHardwareSearch(w http.ResponseWriter, r *http.Request) {
 
 	hardware.ExtraPropertiesRaw = properties
 
-	returnedNetworks, err := datastore.SearchGenericHardware(hardware)
+	returnedHardware, err := datastore.SearchGenericHardware(hardware)
 	if err == database.NoSuch {
 		log.Println("ERROR: ", err)
 		pdet := base.NewProblemDetails("about: blank",
@@ -512,9 +513,9 @@ func doHardwareSearch(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	ba, err := json.Marshal(returnedNetworks)
+	ba, err := json.Marshal(returnedHardware)
 	if err != nil {
-		log.Println("ERROR: JSON marshal of networks failed:", err)
+		log.Println("ERROR: JSON marshal of hardware failed:", err)
 		pdet := base.NewProblemDetails("about: blank",
 			"Internal Server Error",
 			"JSON marshal error",
