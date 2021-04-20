@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - CASMHMS-4600 - Fixed an issue where the Hardware search API did not accept `comptype_hl_switch` and `comptype_cdu_mgmt_switch` as valid values to the `type` query param.
-- CASMHMS-4578 - Update the cray-service chart to 2.4.5 to address postgres security vulnerabilities.
+- CASMHMS-4578/CASMHMS-4749 - Update the cray-service chart to 2.4.7 to address postgres security vulnerabilities and wait-for-postgres resource limit changes..
 - Fixed an issue where SLS did not have `comptype_cab_pdu_pwr_connector` properly defined.
 
 ## [1.18.4] - 2021-03-31
