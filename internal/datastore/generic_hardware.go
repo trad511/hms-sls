@@ -25,9 +25,10 @@ package datastore
 import (
 	"errors"
 	"fmt"
+
 	base "stash.us.cray.com/HMS/hms-base"
 	"stash.us.cray.com/HMS/hms-sls/internal/database"
-	"stash.us.cray.com/HMS/hms-sls/pkg/sls-common"
+	sls_common "stash.us.cray.com/HMS/hms-sls/pkg/sls-common"
 )
 
 var InvalidExtraProperties = errors.New("extra properties does not match expected format")
@@ -75,6 +76,7 @@ func validateType(typeObj sls_common.HMSStringType) error {
 		return UnsupportedType
 
 	/* Items in this section have specific properties that require validation */
+	case sls_common.CabinetPDUPowerConnector:
 	case sls_common.NodePowerConnector:
 		//PoweredBy
 	case sls_common.HSNConnector:
@@ -87,6 +89,8 @@ func validateType(typeObj sls_common.HMSStringType) error {
 	case sls_common.MgmtSwitchConnector:
 		// NodeNics
 		// VendorName
+	case sls_common.MgmtHLSwitch:
+	case sls_common.CDUMgmtSwitch:
 	case sls_common.RouterBMC:
 		//IP6addr
 		//IP4addr
