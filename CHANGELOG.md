@@ -5,17 +5,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.18.5] - 2021-04-06
+## [1.8.6] - 2021-04-20
+
+### Changed
+- Updated Dockerfile to pull base images from Artifactory instead of DTR.
+
+## [1.8.5] - 2021-04-06
 
 ### Changed
 - CASMHMS-4600 - Fixed an issue where the Hardware search API did not accept `comptype_hl_switch` and `comptype_cdu_mgmt_switch` as valid values to the `type` query param.
 - CASMHMS-4578/CASMHMS-4749 - Update the cray-service chart to 2.4.7 to address postgres security vulnerabilities and wait-for-postgres resource limit changes..
 - Fixed an issue where SLS did not have `comptype_cab_pdu_pwr_connector` properly defined.
 
-## [1.18.4] - 2021-03-31
+## [1.8.4] - 2021-03-31
 
 ### Changed
-
 - CASMHMS-4605 - Update the loftsman/docker-kubectl image to use a production version.
 
 ## [1.8.3] - 2021-03-19
@@ -30,7 +34,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.8.1] - 2021-02-03
 
-### Add
+### Added
 - Adding the runSnyk.sh script which was missed previosuly.
 
 ## [1.8.0] - 2021-02-01
