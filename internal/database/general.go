@@ -56,6 +56,9 @@ func NewDatabase() (err error) {
 			return
 		}
 
+		DB.SetMaxOpenConns(25) // 100 connections MAX. There are usually 3 replicas for SLS, so each one can get 25 
+		DB.SetConnMaxLifetime(time.Minute)
+
 		for {
 			pingErr := DB.Ping()
 			if pingErr != nil {
