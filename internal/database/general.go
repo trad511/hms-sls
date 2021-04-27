@@ -25,13 +25,14 @@ package database
 import (
 	"database/sql"
 	"fmt"
-	_ "github.com/lib/pq"
-	"github.com/pkg/errors"
 	"log"
 	"os"
 	"strconv"
 	"sync"
 	"time"
+
+	_ "github.com/lib/pq"
+	"github.com/pkg/errors"
 )
 
 var DB *sql.DB
@@ -54,7 +55,17 @@ func NewDatabase() (err error) {
 			return
 		}
 
-		DB.SetMaxOpenConns(25) // 100 connections MAX. There are usually 3 replicas for SLS, so each one can get 25 
+		maxDatabaseConnections := 25; // By deafult the postgres database has 100 connections MAX. There are usually 3 replicas for SLS, so each one can get 25
+		if maxDatabaseConnectionsRaw, ok := os.LookupEnv("SLS_MAX_DATABASE_CONNECTIONS"); ok {
+			maxDatabaseConnections, err = strconv.Atoi(maxDatabaseConnectionsRaw)
+			if err != nil {
+				log.Printf("Unable to parse SLS_MAX_DATABASE_CONNECTIONS environment variable: %v", err)
+				return err
+			}
+		}
+
+		log.Printf("Max database connections: %d", maxDatabaseConnections)
+		DB.SetMaxOpenConns(maxDatabaseConnections)  
 		DB.SetConnMaxLifetime(time.Minute)
 
 		for {
