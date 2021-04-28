@@ -53,6 +53,8 @@ cray-service:
             secretKeyRef:
               name: slsuser.cray-sls-postgres.credentials
               key: password
+        - name: SLS_MAX_DATABASE_CONNECTIONS
+          value: "25"
       livenessProbe:
         httpGet:
           port: 8376
