@@ -356,6 +356,8 @@ type IPV4Subnet struct {
 	DHCPStart      net.IP          `json:"DHCPStart,omitempty"`
 	DHCPEnd        net.IP          `json:"DHCPEnd,omitempty"`
 	Comment        string          `json:"Comment,omitempty"`
+    ReserverationStart   net.IP      `json:ReservationStart,omitempty`
+    ReserverationEnd     net.IP      `json:ReservationStart,omitempty`
 }
 
 type NetworkArray []Network
