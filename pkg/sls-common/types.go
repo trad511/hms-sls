@@ -347,15 +347,17 @@ type IPReservation struct {
 
 // IPV4Subnet is a type for managing IPv4 Subnets
 type IPV4Subnet struct {
-	FullName       string          `json:"FullName"`
-	CIDR           string          `json:"CIDR"`
-	IPReservations []IPReservation `json:"IPReservations,omitempty"`
-	Name           string          `json:"Name"`
-	VlanID         int16           `json:"VlanID"`
-	Gateway        net.IP          `json:"Gateway"`
-	DHCPStart      net.IP          `json:"DHCPStart,omitempty"`
-	DHCPEnd        net.IP          `json:"DHCPEnd,omitempty"`
-	Comment        string          `json:"Comment,omitempty"`
+	FullName         string          `json:"FullName"`
+	CIDR             string          `json:"CIDR"`
+	IPReservations   []IPReservation `json:"IPReservations,omitempty"`
+	Name             string          `json:"Name"`
+	VlanID           int16           `json:"VlanID"`
+	Gateway          net.IP          `json:"Gateway"`
+	DHCPStart        net.IP          `json:"DHCPStart,omitempty"`
+	DHCPEnd          net.IP          `json:"DHCPEnd,omitempty"`
+	Comment          string          `json:"Comment,omitempty"`
+	ReservationStart net.IP          `json:"ReservationStart,omitempty"`
+	ReservationEnd   net.IP          `json:"ReservationEnd,omitempty"`
 }
 
 type NetworkArray []Network
