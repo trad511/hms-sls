@@ -2,7 +2,7 @@ version: '3.1'
 services:
   postgres:
     hostname: postgres
-    image: dtr.dev.cray.com/library/postgres:11-alpine
+    image: arti.dev.cray.com/third-party-docker-stable-local/postgres:11-alpine
     environment:
       - POSTGRES_USER=slsuser
       - POSTGRES_DB=sls
