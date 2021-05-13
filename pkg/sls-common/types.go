@@ -228,7 +228,9 @@ type ComptypeRtrBmc struct {
 	IP4Addr  string `json:"IP4addr,omitempty"`
 	Username string `json:"Username,omitempty"`
 	Password string `json:"Password,omitempty"`
-} /*
+}
+
+/*
 ComptypeNodeBmc represents a comptype_nodecard, the BMC of a compute node
 */
 type ComptypeNodeBmc struct {
@@ -236,6 +238,15 @@ type ComptypeNodeBmc struct {
 	IP4Addr  string `json:"IP4addr,omitempty"`
 	Username string `json:"Username,omitempty"`
 	Password string `json:"Password,omitempty"`
+
+	Aliases []string `json:"Aliases,omitempty"`
+}
+
+/*
+ComptypeChassisBmc represents a comptype_chassis_bmc, the BMC of a chassis
+*/
+type ComptypeChassisBmc struct {
+	Aliases []string `json:"Aliases,omitempty"`
 }
 
 /*
