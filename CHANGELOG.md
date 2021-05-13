@@ -5,6 +5,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.8.10] - 2021-05-13
+
+### Changed
+- Added aliases to ComptypeNodeBmc and added new struct for ComptypeChassisBmc to support aliases for that as well if necessary.
+
 ## [1.8.9] - 2021-05-05
 
 ### Changed
