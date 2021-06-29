@@ -1,6 +1,6 @@
 module stash.us.cray.com/HMS/hms-sls
 
-go 1.12
+go 1.16
 
 require (
 	github.com/aws/aws-sdk-go v1.32.4
