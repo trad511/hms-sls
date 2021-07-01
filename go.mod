@@ -1,6 +1,6 @@
 module stash.us.cray.com/HMS/hms-sls
 
-go 1.12
+go 1.16
 
 require (
 	github.com/aws/aws-sdk-go v1.32.4
@@ -13,9 +13,9 @@ require (
 	github.com/sirupsen/logrus v1.6.0 // indirect
 	github.com/stretchr/testify v1.5.1
 	go.uber.org/zap v1.15.0
-	stash.us.cray.com/HMS/hms-base v1.12.0
-	stash.us.cray.com/HMS/hms-compcredentials v1.10.0
-	stash.us.cray.com/HMS/hms-s3 v1.8.0
-	stash.us.cray.com/HMS/hms-securestorage v1.11.0
-	stash.us.cray.com/HMS/hms-shcd-parser v1.4.0
+	gopkg.in/check.v1 v1.0.0-20190902080502-41f04d3bba15 // indirect
+	stash.us.cray.com/HMS/hms-base v1.13.0
+	stash.us.cray.com/HMS/hms-compcredentials v1.11.0
+	stash.us.cray.com/HMS/hms-s3 v1.9.0
+	stash.us.cray.com/HMS/hms-securestorage v1.12.0
 )
