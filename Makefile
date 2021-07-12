@@ -1,7 +1,7 @@
 NAME ?= hms-sls
 VERSION ?= $(shell cat .version)
 
-all: image unittest coverage snyk
+all: image unittest coverage
 
 image:
 	docker build --pull ${DOCKER_ARGS} --tag '${NAME}:${VERSION}' .
@@ -11,7 +11,4 @@ unittest:
 
 coverage:
 	./runCoverage.sh
-
-snyk:
-	./runSnyk.sh
 
