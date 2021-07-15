@@ -11,17 +11,26 @@ pipeline {
     }
 
     environment {
-        NAME = "hms-sls"
+        NAME = "cray-sls"
         DESCRIPTION = "Cray System Layout Service"
         IS_STABLE = getBuildIsStable()
         VERSION = getDockerBuildVersion(isStable: env.IS_STABLE)
         DOCKER_ARGS = getDockerBuildArgs(name: env.NAME, description: env.DESCRIPTION)
+        CHART_NAME = "cray-hms-sls"
+        CHART_VERSION = getChartVersion(version: env.VERSION)
+
     }
 
     stages {
-        stage("Build") {
+        stage("Image") {
             steps {
                 sh "make image"
+            }
+        }
+
+        stage("Chart") {
+            steps {
+                sh "make chart"
             }
         }
 
@@ -41,6 +50,7 @@ pipeline {
             steps {
                 script {
                     publishCsmDockerImage(image: env.NAME, tag: env.VERSION, isStable: env.IS_STABLE)
+                    publishCsmHelmCharts(component: env.CHART_NAME, chartsPath: "${WORKSPACE}/kubernetes/.packaged", isStable: env.IS_STABLE)
                 }
             }
         }
