@@ -2,4 +2,4 @@ apiVersion: v1
 description: "Kubernetes resources for cray-hms-sls"
 name: "cray-hms-sls"
 home: "HMS/hms-sls"
-version: 1.9.2
+version: 1.9.3
