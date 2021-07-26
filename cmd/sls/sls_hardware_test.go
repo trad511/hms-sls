@@ -32,11 +32,11 @@ import (
 	"reflect"
 	"testing"
 
+	base "github.com/Cray-HPE/hms-base"
+	"github.com/Cray-HPE/hms-sls/internal/database"
+	sls_common "github.com/Cray-HPE/hms-sls/pkg/sls-common"
 	"github.com/gorilla/mux"
 	"github.com/stretchr/testify/suite"
-	base "stash.us.cray.com/HMS/hms-base"
-	"stash.us.cray.com/HMS/hms-sls/internal/database"
-	sls_common "stash.us.cray.com/HMS/hms-sls/pkg/sls-common"
 )
 
 type testData struct {

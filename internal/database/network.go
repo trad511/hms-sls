@@ -29,9 +29,9 @@ import (
 	"strings"
 	"time"
 
+	sls_common "github.com/Cray-HPE/hms-sls/pkg/sls-common"
 	"github.com/lib/pq"
 	"github.com/pkg/errors"
-	sls_common "stash.us.cray.com/HMS/hms-sls/pkg/sls-common"
 )
 
 func InsertNetwork(network sls_common.Network) (err error) {

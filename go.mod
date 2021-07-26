@@ -1,8 +1,12 @@
-module stash.us.cray.com/HMS/hms-sls
+module github.com/Cray-HPE/hms-sls
 
 go 1.16
 
 require (
+	github.com/Cray-HPE/hms-base v1.15.0
+	github.com/Cray-HPE/hms-compcredentials v1.11.2
+	github.com/Cray-HPE/hms-s3 v1.9.2
+	github.com/Cray-HPE/hms-securestorage v1.12.2
 	github.com/aws/aws-sdk-go v1.32.4
 	github.com/golang-migrate/migrate/v4 v4.13.0
 	github.com/gorilla/mux v1.7.4
@@ -14,8 +18,4 @@ require (
 	github.com/stretchr/testify v1.5.1
 	go.uber.org/zap v1.15.0
 	gopkg.in/check.v1 v1.0.0-20190902080502-41f04d3bba15 // indirect
-	stash.us.cray.com/HMS/hms-base v1.13.0
-	stash.us.cray.com/HMS/hms-compcredentials v1.11.0
-	stash.us.cray.com/HMS/hms-s3 v1.9.0
-	stash.us.cray.com/HMS/hms-securestorage v1.12.0
 )
