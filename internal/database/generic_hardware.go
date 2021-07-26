@@ -30,7 +30,7 @@ import (
 	"time"
 
 	"github.com/lib/pq"
-	sls_common "stash.us.cray.com/HMS/hms-sls/pkg/sls-common"
+	sls_common "github.com/Cray-HPE/hms-sls/pkg/sls-common"
 
 	"github.com/pkg/errors"
 )

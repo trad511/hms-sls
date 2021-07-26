@@ -26,9 +26,9 @@ import (
 	"errors"
 	"fmt"
 
-	base "stash.us.cray.com/HMS/hms-base"
-	"stash.us.cray.com/HMS/hms-sls/internal/database"
-	sls_common "stash.us.cray.com/HMS/hms-sls/pkg/sls-common"
+	base "github.com/Cray-HPE/hms-base"
+	"github.com/Cray-HPE/hms-sls/internal/database"
+	sls_common "github.com/Cray-HPE/hms-sls/pkg/sls-common"
 )
 
 var InvalidExtraProperties = errors.New("extra properties does not match expected format")

@@ -30,10 +30,10 @@ import (
 	"strings"
 
 	"github.com/gorilla/mux"
-	base "stash.us.cray.com/HMS/hms-base"
-	"stash.us.cray.com/HMS/hms-sls/internal/database"
-	"stash.us.cray.com/HMS/hms-sls/internal/datastore"
-	sls_common "stash.us.cray.com/HMS/hms-sls/pkg/sls-common"
+	base "github.com/Cray-HPE/hms-base"
+	"github.com/Cray-HPE/hms-sls/internal/database"
+	"github.com/Cray-HPE/hms-sls/internal/datastore"
+	sls_common "github.com/Cray-HPE/hms-sls/pkg/sls-common"
 )
 
 //  /networks GET API

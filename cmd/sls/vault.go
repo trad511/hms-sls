@@ -24,8 +24,8 @@ package main
 
 import (
 	"log"
-	compcredentials "stash.us.cray.com/HMS/hms-compcredentials"
-	securestorage "stash.us.cray.com/HMS/hms-securestorage"
+	compcredentials "github.com/Cray-HPE/hms-compcredentials"
+	securestorage "github.com/Cray-HPE/hms-securestorage"
 	"time"
 )
 

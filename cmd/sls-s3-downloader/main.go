@@ -34,7 +34,7 @@ import (
 	"github.com/aws/aws-sdk-go/service/s3"
 	"github.com/namsral/flag"
 	"go.uber.org/zap"
-	hms_s3 "stash.us.cray.com/HMS/hms-s3"
+	hms_s3 "github.com/Cray-HPE/hms-s3"
 )
 
 const SLS_FILE = "sls_input_file.json"

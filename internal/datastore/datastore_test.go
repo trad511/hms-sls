@@ -27,12 +27,12 @@ import (
 	"reflect"
 	"testing"
 
-	sls_common "stash.us.cray.com/HMS/hms-sls/pkg/sls-common"
+	sls_common "github.com/Cray-HPE/hms-sls/pkg/sls-common"
 
 	"github.com/stretchr/testify/suite"
 
-	base "stash.us.cray.com/HMS/hms-base"
-	"stash.us.cray.com/HMS/hms-sls/internal/database"
+	base "github.com/Cray-HPE/hms-base"
+	"github.com/Cray-HPE/hms-sls/internal/database"
 )
 
 type DatastoreTestSuite struct {

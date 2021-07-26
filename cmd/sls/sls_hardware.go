@@ -29,13 +29,13 @@ import (
 	"net/http"
 	"strings"
 
-	sls_common "stash.us.cray.com/HMS/hms-sls/pkg/sls-common"
+	sls_common "github.com/Cray-HPE/hms-sls/pkg/sls-common"
 
-	base "stash.us.cray.com/HMS/hms-base"
-	"stash.us.cray.com/HMS/hms-sls/internal/database"
+	base "github.com/Cray-HPE/hms-base"
+	"github.com/Cray-HPE/hms-sls/internal/database"
 
 	"github.com/gorilla/mux"
-	"stash.us.cray.com/HMS/hms-sls/internal/datastore"
+	"github.com/Cray-HPE/hms-sls/internal/datastore"
 )
 
 //  /hardware POST API
