@@ -26,8 +26,8 @@ import (
 	"errors"
 	"strings"
 
-	"stash.us.cray.com/HMS/hms-sls/internal/database"
-	sls_common "stash.us.cray.com/HMS/hms-sls/pkg/sls-common"
+	"github.com/Cray-HPE/hms-sls/internal/database"
+	sls_common "github.com/Cray-HPE/hms-sls/pkg/sls-common"
 )
 
 var InvalidNetworkType = errors.New("invalid network type")

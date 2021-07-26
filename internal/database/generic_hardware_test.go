@@ -24,7 +24,7 @@ package database
 
 import (
 	"encoding/json"
-	"stash.us.cray.com/HMS/hms-sls/pkg/sls-common"
+	"github.com/Cray-HPE/hms-sls/pkg/sls-common"
 	"strconv"
 	"testing"
 

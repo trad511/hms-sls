@@ -37,13 +37,13 @@ import (
 	"log"
 	"net/http"
 	"reflect"
-	"stash.us.cray.com/HMS/hms-sls/pkg/sls-common"
+	"github.com/Cray-HPE/hms-sls/pkg/sls-common"
 
-	compcredentials "stash.us.cray.com/HMS/hms-compcredentials"
-	"stash.us.cray.com/HMS/hms-sls/internal/database"
+	compcredentials "github.com/Cray-HPE/hms-compcredentials"
+	"github.com/Cray-HPE/hms-sls/internal/database"
 
-	base "stash.us.cray.com/HMS/hms-base"
-	"stash.us.cray.com/HMS/hms-sls/internal/datastore"
+	base "github.com/Cray-HPE/hms-base"
+	"github.com/Cray-HPE/hms-sls/internal/datastore"
 )
 
 // Used for response functions

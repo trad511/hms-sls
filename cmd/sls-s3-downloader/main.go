@@ -31,16 +31,16 @@ import (
 	"path"
 	"time"
 
+	hms_s3 "github.com/Cray-HPE/hms-s3"
 	"github.com/aws/aws-sdk-go/service/s3"
 	"github.com/namsral/flag"
 	"go.uber.org/zap"
-	hms_s3 "stash.us.cray.com/HMS/hms-s3"
 )
 
 const SLS_FILE = "sls_input_file.json"
 
 var (
-	outputDir = flag.String("output_dir", "/", "Destination directory to put files.")
+	outputDir             = flag.String("output_dir", "/", "Destination directory to put files.")
 	maxPingBucketAttempts = flag.Int("max_ping_bucket_attempts", 30, "Number of attempts to ping the S3 bucket")
 
 	logger   *zap.Logger
@@ -124,7 +124,7 @@ func main() {
 			break
 		}
 	}
-	
+
 	if !connected {
 		logger.Fatal("Exhausted attempts to ping bucket")
 	}

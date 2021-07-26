@@ -32,11 +32,11 @@ import (
 	"strings"
 	"syscall"
 
+	compcredentials "github.com/Cray-HPE/hms-compcredentials"
 	"github.com/namsral/flag"
-	compcredentials "stash.us.cray.com/HMS/hms-compcredentials"
 
+	"github.com/Cray-HPE/hms-sls/internal/database"
 	"github.com/gorilla/mux"
-	"stash.us.cray.com/HMS/hms-sls/internal/database"
 )
 
 type Route struct {

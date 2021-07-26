@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.10.4] - 2021-07-26
+
+### Changed
+
+- Replaced all old stash paths with github.com
+
 ## [1.10.3] - 2021-07-19
 
 ### Changed
@@ -52,7 +58,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.8.7] - 2021-04-27
 
 ### Changed
-- CASMHMS-4765: Set a limit for the maximum number of database connections SLS can have open. 
+- CASMHMS-4765: Set a limit for the maximum number of database connections SLS can have open.
 
 ## [1.8.6] - 2021-04-20
 
@@ -79,7 +85,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.8.2] - 2021-03-09
 
 ### Changed
-- CASMINST-1546: Improved error handling in the SLS loader job. Modified the process of determining the IP address of rgw-vip.nmn to be more robust. 
+- CASMINST-1546: Improved error handling in the SLS loader job. Modified the process of determining the IP address of rgw-vip.nmn to be more robust.
 
 ## [1.8.1] - 2021-02-03
 
@@ -143,7 +149,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.4.0] - 2020-09-15
 
 ### Changed
-- CASMCLOUD-1023 - Updated cray-service base chart to the latest 2.x version. This new version of the cray service chart now supports Helm v3. 
+- CASMCLOUD-1023 - Updated cray-service base chart to the latest 2.x version. This new version of the cray service chart now supports Helm v3.
 - Modified containers/init containers, volume, and persistent volume claim value definitions to be objects instead of arrays
 
 ## [1.3.7] - 2020-09-10
@@ -216,19 +222,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- CASMHMS-3550 - added all logic relating to downloading files from S3, generating SLS config, and pushing that into SLS. 
+- CASMHMS-3550 - added all logic relating to downloading files from S3, generating SLS config, and pushing that into SLS.
 
 ## [1.1.0]
 
 ### Added
 
-- CASMHMS-3466 - added a lot of the parsing logic for the new config files. 
+- CASMHMS-3466 - added a lot of the parsing logic for the new config files.
 
 ## [1.0.1]
 
 ### Fixed
 
-- CASMHMS-3526 - fixed job cleanup. 
+- CASMHMS-3526 - fixed job cleanup.
 
 ## [1.0.0]
 

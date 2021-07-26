@@ -29,6 +29,6 @@ ENV DBPASS=slsuser
 
 # Run unit tests...
 RUN set -ex \
-    && go test -v -o sls stash.us.cray.com/HMS/hms-sls/cmd/sls \
-    && go test -v -o sls stash.us.cray.com/HMS/hms-sls/internal/database \
-    && go test -v -o sls stash.us.cray.com/HMS/hms-sls/internal/datastore
+    && go test -v -o sls github.com/Cray-HPE/hms-sls/cmd/sls \
+    && go test -v -o sls github.com/Cray-HPE/hms-sls/internal/database \
+    && go test -v -o sls github.com/Cray-HPE/hms-sls/internal/datastore

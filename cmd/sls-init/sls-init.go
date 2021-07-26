@@ -23,20 +23,21 @@
 package main
 
 import (
+	"log"
+	"os"
+	"strconv"
+
+	"github.com/Cray-HPE/hms-sls/internal/database"
 	"github.com/golang-migrate/migrate/v4"
 	"github.com/golang-migrate/migrate/v4/database/postgres"
 	_ "github.com/golang-migrate/migrate/v4/source/file"
 	_ "github.com/lib/pq"
 	"github.com/namsral/flag"
-	"log"
-	"os"
-	"stash.us.cray.com/HMS/hms-sls/internal/database"
-	"strconv"
 )
 
 var (
-	forceStep = flag.Int("force_step", -1, "Force migration to step X")
-	fresh     = flag.Bool("fresh", false, "Revert all schemas before installing (drops all data)")
+	forceStep      = flag.Int("force_step", -1, "Force migration to step X")
+	fresh          = flag.Bool("fresh", false, "Revert all schemas before installing (drops all data)")
 	schema_version = flag.String("schema_version", "latest", "Version of schema to migrate to")
 )
 
