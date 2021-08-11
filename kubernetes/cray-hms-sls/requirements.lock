@@ -1,6 +1,6 @@
 dependencies:
 - name: cray-service
-  repository: https://arti.dev.cray.com/artifactory/csm-helm-stable-local
-  version: 2.7.0
-digest: sha256:a68ca6fa4505cff31559b0a79501f0652e020552bb218575f26e052293897db2
-generated: "2021-08-10T17:14:48.751515979-06:00"
+  repository: https://artifactory.algol60.net/artifactory/csm-helm-charts
+  version: 2.8.0
+digest: sha256:4a60684923c7310e8db14a2956c03a18e49bc68261dcf8833e3aaf27e17e406f
+generated: "2021-08-11T15:39:10.628974968-06:00"

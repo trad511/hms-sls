@@ -61,7 +61,8 @@ docker wait $INIT_CONTAINER_NAME
 docker build -t cray/sls-base --target base .
 
 # Run the coverage.
-docker build --network $NETWORK_NAME -t cray/sls-unit-testing -f Dockerfile.coverage --no-cache .
+DOCKER_BUILDKIT=0 docker build --network $NETWORK_NAME -t cray/sls-unit-testing -f Dockerfile.coverage --no-cache .
+
 build_result=$?
 if [ $build_result -ne 0 ]; then
   echo "Coverage tests failed!"
