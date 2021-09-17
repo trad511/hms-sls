@@ -40,7 +40,7 @@ import (
 const SLS_FILE = "sls_input_file.json"
 
 var (
-	outputDir             = flag.String("output_dir", "/", "Destination directory to put files.")
+	outputDir             = flag.String("output_dir", "/sls", "Destination directory to put files.")
 	maxPingBucketAttempts = flag.Int("max_ping_bucket_attempts", 30, "Number of attempts to ping the S3 bucket")
 
 	logger   *zap.Logger
