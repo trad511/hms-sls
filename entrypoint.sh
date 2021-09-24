@@ -26,11 +26,17 @@ set -ex
 echo "Running $1"
 
 if [ "$1" = 'sls-init' ]; then
+  echo "TRACE:1.1-image: before creation: list /persistent_migrations"
+  ls -ld /persistent_migrations || true
+  ls -l /persistent_migrations || true
   # This directory has to exist either way, but hopefully a persistent storage is mounted here.
   mkdir -p /persistent_migrations
 
   # Make sure the migrations make their way to the persistent mounted storage.
   cp /migrations/*.sql /persistent_migrations/
+  echo "TRACE:1.1-image: after sql copy: list /persistent_migrations"
+  ls -ld /persistent_migrations || true
+  ls -l /persistent_migrations || true
 
   echo "Migrations copied to persistent location."
 elif [ "$1" = 'sls-loader' ]; then

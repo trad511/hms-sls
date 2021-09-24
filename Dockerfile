@@ -71,7 +71,9 @@ RUN set -ex \
     && apk add --no-cache \
         curl \
         jq \
-        bind-tools
+        bind-tools \
+    && mkdir -p /persistent_migrations \
+    && chmod 755 /persistent_migrations
 
 # Copy files necessary for running/setup
 COPY migrations /migrations
