@@ -26,15 +26,20 @@ set -ex
 echo "Running $1"
 
 if [ "$1" = 'sls-init' ]; then
-
   # This directory has to exist. Hopefully a persistent storage is mounted here.
   if [ ! -d "/persistent_migrations" ]; then
     echo "Missing directory /persistent_migrations"
     exit 1
   fi
+  echo "TRACE:1.2-non-root: before creation: list /persistent_migrations"
+  ls -ld /persistent_migrations || true
+  ls -l /persistent_migrations || true
 
   # Make sure the migrations make their way to the persistent mounted storage.
   cp /migrations/*.sql /persistent_migrations/
+  echo "TRACE:1.2-non-root: after sql copy: list /persistent_migrations"
+  ls -ld /persistent_migrations || true
+  ls -l /persistent_migrations || true
 
   echo "Migrations copied to persistent location."
 elif [ "$1" = 'sls-loader' ]; then
