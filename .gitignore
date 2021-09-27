@@ -1,6 +1,7 @@
 .vscode/settings.json
 *.tgz
 *.tar
+*.swp
 .env
 /sls
 kubernetes/cray-hms-sls/helm
