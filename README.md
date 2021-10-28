@@ -10,6 +10,12 @@ SLS is mostly an API to allow access to a database.  Users make queries on the b
 
 TBD.  Initial configuration will be uploaded by an init container.
 
+## SLS CT Testing
+
+This repository builds and publishes hms-sls-ct-test RPMs along with the service itself containing tests that verify SLS on the
+NCNs of live Shasta systems. The tests require the hms-ct-test-base RPM to also be installed on the NCNs in order to execute.
+The version of the test RPM installed on the NCNs should always match the version of SLS deployed on the system.
+
 ## More information
 
 * [SLS design documentation](https://connect.us.cray.com/confluence/display/CASMHMS/System+Layout+Service+%28SLS%29+Design+Documentation)
