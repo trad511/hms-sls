@@ -6,6 +6,9 @@ schemaVersion: "3"
 schemaStorageClass: ceph-cephfs-external
 schemaAccessMode: ReadWriteMany
 
+namespaceGetter:
+  resolvDir: /etc/ # For CSM 1.1 and older use /run/netconfig/
+
 loader:
   forceUpload: false
   checkS3Marker: true

@@ -36,7 +36,7 @@ spec:
       # On the NCNs the file /etc/resolv.conf is a a symlink to /run/netconfig/resolv.conf
       # This is true on both vshasta & baremetal, and k8s hostPath did not work with the symlink
       - hostPath:
-          path: /run/netconfig/
+          path: {{ .Values.namespaceGetter.resolvDir | quote }}
         name: resolv-dir
 
 ---
